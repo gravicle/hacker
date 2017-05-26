@@ -9,7 +9,7 @@ public final class Story: Item {
         link = try? map.from("url")
         text = try? map.from("text")
         title = try? map.from("title")
-        let commentsArray: [Comment] = try map.from("children")
+        comments = (try? map.from("children", in: context) as [Comment]).flatMap(NSOrderedSet.init)
     }
 
 }

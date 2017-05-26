@@ -27,23 +27,21 @@ extension ObservableType {
 }
 
 final fileprivate class SamplerSink<O: ObserverType, SampleType>
-    : ObserverType
-    , LockOwnerType
-    , SynchronizedOnType {
+    : ObserverType, LockOwnerType, SynchronizedOnType {
     typealias E = SampleType
-    
+
     typealias Parent = SampleSequenceSink<O, SampleType>
-    
+
     fileprivate let _parent: Parent
 
     var _lock: RecursiveLock {
         return _parent._lock
     }
-    
+
     init(parent: Parent) {
         _parent = parent
     }
-    
+
     func on(_ event: Event<E>) {
         synchronizedOn(event)
     }
@@ -77,35 +75,32 @@ final fileprivate class SamplerSink<O: ObserverType, SampleType>
 }
 
 final fileprivate class SampleSequenceSink<O: ObserverType, SampleType>
-    : Sink<O>
-    , ObserverType
-    , LockOwnerType
-    , SynchronizedOnType {
+    : Sink<O>, ObserverType, LockOwnerType, SynchronizedOnType {
     typealias Element = O.E
     typealias Parent = Sample<Element, SampleType>
-    
+
     fileprivate let _parent: Parent
 
     let _lock = RecursiveLock()
-    
+
     // state
     fileprivate var _element = nil as Element?
     fileprivate var _atEnd = false
-    
+
     fileprivate let _sourceSubscription = SingleAssignmentDisposable()
-    
+
     init(parent: Parent, observer: O, cancel: Cancelable) {
         _parent = parent
         super.init(observer: observer, cancel: cancel)
     }
-    
+
     func run() -> Disposable {
         _sourceSubscription.setDisposable(_parent._source.subscribe(self))
         let samplerSubscription = _parent._sampler.subscribe(SamplerSink(parent: self))
-        
+
         return Disposables.create(_sourceSubscription, samplerSubscription)
     }
-    
+
     func on(_ event: Event<Element>) {
         synchronizedOn(event)
     }
@@ -122,7 +117,7 @@ final fileprivate class SampleSequenceSink<O: ObserverType, SampleType>
             _sourceSubscription.dispose()
         }
     }
-    
+
 }
 
 final fileprivate class Sample<Element, SampleType> : Producer<Element> {
@@ -133,7 +128,7 @@ final fileprivate class Sample<Element, SampleType> : Producer<Element> {
         _source = source
         _sampler = sampler
     }
-    
+
     override func run<O: ObserverType>(_ observer: O, cancel: Cancelable) -> (sink: Disposable, subscription: Disposable) where O.E == Element {
         let sink = SampleSequenceSink(parent: self, observer: observer, cancel: cancel)
         let subscription = sink.run()

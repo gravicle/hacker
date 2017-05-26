@@ -3,7 +3,7 @@ import Models
 import Mapper
 
 let container = NSPersistentContainer(name: "Hacker")
-container.loadPersistentStores { (desc, error) in
+container.loadPersistentStores { (_, error) in
     if let error = error {
         print(error)
     }
@@ -31,5 +31,4 @@ do {
     let item = try Item(map: mapper, in: container.viewContext)
 
     try container.viewContext.save()
-}
-catch { print(error) }
+} catch { print(error) }

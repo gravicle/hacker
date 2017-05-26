@@ -15,14 +15,14 @@
     import UIKit
 
     extension UIScrollView {
-        
+
         /// Factory method that enables subclasses to implement their own `delegate`.
         ///
         /// - returns: Instance of delegate proxy that wraps `delegate`.
         public func createRxDelegateProxy() -> RxScrollViewDelegateProxy {
             return RxScrollViewDelegateProxy(parentObject: self)
         }
-        
+
     }
 
     extension Reactive where Base: UIScrollView {
@@ -33,7 +33,7 @@
         public var delegate: DelegateProxy {
             return RxScrollViewDelegateProxy.proxyForObject(base)
         }
-        
+
         /// Reactive wrapper for `contentOffset`.
         public var contentOffset: ControlProperty<CGPoint> {
             let proxy = RxScrollViewDelegateProxy.proxyForObject(base)
@@ -57,13 +57,13 @@
             let source = RxScrollViewDelegateProxy.proxyForObject(base).contentOffsetPublishSubject
             return ControlEvent(events: source)
         }
-    	
+
     	/// Reactive wrapper for delegate method `scrollViewDidEndDecelerating`
     	public var didEndDecelerating: ControlEvent<Void> {
     		let source = delegate.methodInvoked(#selector(UIScrollViewDelegate.scrollViewDidEndDecelerating(_:))).map { _ in }
     		return ControlEvent(events: source)
     	}
-    	
+
     	/// Reactive wrapper for delegate method `scrollViewDidEndDragging(_:willDecelerate:)`
     	public var didEndDragging: ControlEvent<Bool> {
     		let source = delegate.methodInvoked(#selector(UIScrollViewDelegate.scrollViewDidEndDragging(_:willDecelerate:))).map { value -> Bool in
@@ -78,13 +78,12 @@
             return ControlEvent(events: source)
         }
 
-
         /// Reactive wrapper for delegate method `scrollViewDidScrollToTop`
         public var didScrollToTop: ControlEvent<Void> {
             let source = delegate.methodInvoked(#selector(UIScrollViewDelegate.scrollViewDidScrollToTop(_:))).map { _ in }
             return ControlEvent(events: source)
         }
-        
+
         /// Reactive wrapper for delegate method `scrollViewDidEndScrollingAnimation`
         public var didEndScrollingAnimation: ControlEvent<Void> {
             let source = delegate.methodInvoked(#selector(UIScrollViewDelegate.scrollViewDidEndScrollingAnimation(_:))).map { _ in }

@@ -49,9 +49,9 @@ extension Reactive where Base: UICollectionView {
             let dataSource = RxCollectionViewReactiveArrayDataSourceSequenceWrapper<S>(cellFactory: cellFactory)
             return self.items(dataSource: dataSource)(source)
         }
-        
+
     }
-    
+
     /**
     Binds sequences of elements to collection view items.
     
@@ -75,7 +75,7 @@ extension Reactive where Base: UICollectionView {
              }
              .disposed(by: disposeBag)
     */
-    public func items<S: Sequence, Cell: UICollectionViewCell, O : ObservableType>
+    public func items<S: Sequence, Cell: UICollectionViewCell, O: ObservableType>
         (cellIdentifier: String, cellType: Cell.Type = Cell.self)
         -> (_ source: O)
         -> (_ configureCell: @escaping (Int, S.Iterator.Element, Cell) -> Void)
@@ -88,13 +88,12 @@ extension Reactive where Base: UICollectionView {
                     configureCell(i, item, cell)
                     return cell
                 }
-                    
+
                 return self.items(dataSource: dataSource)(source)
             }
         }
     }
 
-    
     /**
     Binds sequences of elements to collection view items using a custom reactive data used to perform the transformation.
     
@@ -139,8 +138,7 @@ extension Reactive where Base: UICollectionView {
             O: ObservableType>
         (dataSource: DataSource)
         -> (_ source: O)
-        -> Disposable where DataSource.Element == O.E
-          {
+        -> Disposable where DataSource.Element == O.E {
         return { source in
             // This is called for sideeffects only, and to make sure delegate proxy is in place when
             // data source is being bound.
@@ -161,7 +159,7 @@ extension Reactive where Base: UICollectionView {
 }
 
 extension UICollectionView {
-   
+
     /// Factory method that enables subclasses to implement their own `delegate`.
     ///
     /// - returns: Instance of delegate proxy that wraps `delegate`.
@@ -186,7 +184,7 @@ extension Reactive where Base: UICollectionView {
     public var dataSource: DelegateProxy {
         return RxCollectionViewDataSourceProxy.proxyForObject(base)
     }
-    
+
     /// Installs data source as forwarding delegate on `rx.dataSource`.
     /// Data source won't be retained.
     ///
@@ -198,14 +196,14 @@ extension Reactive where Base: UICollectionView {
         -> Disposable {
         return RxCollectionViewDataSourceProxy.installForwardDelegate(dataSource, retainDelegate: false, onProxyForObject: self.base)
     }
-   
+
     /// Reactive wrapper for `delegate` message `collectionView:didSelectItemAtIndexPath:`.
     public var itemSelected: ControlEvent<IndexPath> {
         let source = delegate.methodInvoked(#selector(UICollectionViewDelegate.collectionView(_:didSelectItemAt:)))
             .map { a in
                 return a[1] as! IndexPath
             }
-        
+
         return ControlEvent(events: source)
     }
 
@@ -236,7 +234,7 @@ extension Reactive where Base: UICollectionView {
 
             return Observable.just(try view.rx.model(at: indexPath))
         }
-        
+
         return ControlEvent(events: source)
     }
 
@@ -260,11 +258,11 @@ extension Reactive where Base: UICollectionView {
 
         return ControlEvent(events: source)
     }
-    
+
     /// Syncronous helper method for retrieving a model at indexPath through a reactive data source
     public func model<T>(at indexPath: IndexPath) throws -> T {
         let dataSource: SectionedViewDataSourceType = castOrFatalError(self.dataSource.forwardToDelegate(), message: "This method only works in case one of the `rx.itemsWith*` methods was used.")
-        
+
         let element = try dataSource.model(at: indexPath)
 
         return element as! T
@@ -275,7 +273,7 @@ extension Reactive where Base: UICollectionView {
 #if os(tvOS)
 
 extension Reactive where Base: UICollectionView {
-    
+
     /// Reactive wrapper for `delegate` message `collectionView:didUpdateFocusInContext:withAnimationCoordinator:`.
     public var didUpdateFocusInContextWithAnimationCoordinator: ControlEvent<(context: UICollectionViewFocusUpdateContext, animationCoordinator: UIFocusAnimationCoordinator)> {
 

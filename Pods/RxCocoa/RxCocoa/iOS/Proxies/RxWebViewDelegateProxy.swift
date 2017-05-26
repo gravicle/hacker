@@ -13,17 +13,14 @@ import UIKit
 import RxSwift
 #endif
 
-public class RxWebViewDelegateProxy
-    : DelegateProxy
-    , DelegateProxyType
-    , UIWebViewDelegate {
+public class RxWebViewDelegateProxy: DelegateProxy, DelegateProxyType, UIWebViewDelegate {
 
     /// For more information take a look at `DelegateProxyType`.
     public override class func createProxyForObject(_ object: AnyObject) -> AnyObject {
         let pickerView: UIWebView = castOrFatalError(object)
         return pickerView.createRxDelegateProxy()
     }
-    
+
     /// For more information take a look at `DelegateProxyType`.
     public class func setCurrentDelegate(_ delegate: AnyObject?, toObject object: AnyObject) {
         let webView: UIWebView = castOrFatalError(object)
@@ -35,7 +32,6 @@ public class RxWebViewDelegateProxy
         let webView: UIWebView = castOrFatalError(object)
         return webView.delegate
     }
-
 
 }
 

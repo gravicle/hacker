@@ -7,7 +7,7 @@
 //
 
 extension ObservableType {
-    
+
     /**
     Multicasts the source sequence notifications through an instantiated subject into all uses of the sequence within a selector function. 
     
@@ -32,7 +32,7 @@ extension ObservableType {
 }
 
 extension ObservableType {
-    
+
     /**
     Returns a connectable observable sequence that shares a single subscription to the underlying sequence. 
     
@@ -80,7 +80,7 @@ extension ObservableType {
 }
 
 extension ConnectableObservableType {
-    
+
     /**
     Returns an observable sequence that stays connected to the source as long as there is at least one subscription to the observable sequence.
 
@@ -110,8 +110,7 @@ extension ObservableType {
 }
 
 final fileprivate class RefCountSink<CO: ConnectableObservableType, O: ObserverType>
-    : Sink<O>
-    , ObserverType where CO.E == O.E {
+    : Sink<O>, ObserverType where CO.E == O.E {
     typealias Element = O.E
     typealias Parent = RefCount<CO>
 
@@ -129,8 +128,7 @@ final fileprivate class RefCountSink<CO: ConnectableObservableType, O: ObserverT
         if _parent._count == 0 {
             _parent._count = 1
             _parent._connectableSubscription = _parent._source.connect()
-        }
-        else {
+        } else {
             _parent._count = _parent._count + 1
         }
         // }
@@ -146,11 +144,9 @@ final fileprivate class RefCountSink<CO: ConnectableObservableType, O: ObserverT
 
                 connectableSubscription.dispose()
                 self._parent._connectableSubscription = nil
-            }
-            else if self._parent._count > 1 {
+            } else if self._parent._count > 1 {
                 self._parent._count = self._parent._count - 1
-            }
-            else {
+            } else {
                 rxFatalError("Something went wrong with RefCount disposing mechanism")
             }
             // }
@@ -192,33 +188,32 @@ final fileprivate class MulticastSink<S: SubjectType, O: ObserverType>: Sink<O>,
     typealias Element = O.E
     typealias ResultType = Element
     typealias MutlicastType = Multicast<S, O.E>
-    
+
     private let _parent: MutlicastType
-    
+
     init(parent: MutlicastType, observer: O, cancel: Cancelable) {
         _parent = parent
         super.init(observer: observer, cancel: cancel)
     }
-    
+
     func run() -> Disposable {
         do {
             let subject = try _parent._subjectSelector()
             let connectable = ConnectableObservableAdapter(source: _parent._source, subject: subject)
-            
+
             let observable = try _parent._selector(connectable)
-            
+
             let subscription = observable.subscribe(self)
             let connection = connectable.connect()
-                
+
             return Disposables.create(subscription, connection)
-        }
-        catch let e {
+        } catch let e {
             forwardOn(.error(e))
             dispose()
             return Disposables.create()
         }
     }
-    
+
     func on(_ event: Event<ResultType>) {
         forwardOn(event)
         switch event {
@@ -232,17 +227,17 @@ final fileprivate class MulticastSink<S: SubjectType, O: ObserverType>: Sink<O>,
 final fileprivate class Multicast<S: SubjectType, R>: Producer<R> {
     typealias SubjectSelectorType = () throws -> S
     typealias SelectorType = (Observable<S.E>) throws -> Observable<R>
-    
+
     fileprivate let _source: Observable<S.SubjectObserverType.E>
     fileprivate let _subjectSelector: SubjectSelectorType
     fileprivate let _selector: SelectorType
-    
+
     init(source: Observable<S.SubjectObserverType.E>, subjectSelector: @escaping SubjectSelectorType, selector: @escaping SelectorType) {
         _source = source
         _subjectSelector = subjectSelector
         _selector = selector
     }
-    
+
     override func run<O: ObserverType>(_ observer: O, cancel: Cancelable) -> (sink: Disposable, subscription: Disposable) where O.E == R {
         let sink = MulticastSink(parent: self, observer: observer, cancel: cancel)
         let subscription = sink.run()

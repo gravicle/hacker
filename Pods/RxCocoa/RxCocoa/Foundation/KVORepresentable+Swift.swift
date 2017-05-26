@@ -71,7 +71,6 @@ extension Bool : KVORepresentable {
     }
 }
 
-
 extension RawRepresentable where RawValue: KVORepresentable {
     /// Constructs `Self` using optional KVO value.
     init?(KVOValue: RawValue.KVOType?) {

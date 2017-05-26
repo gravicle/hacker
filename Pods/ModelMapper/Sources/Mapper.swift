@@ -84,8 +84,7 @@ public struct Mapper {
     ///
     /// - returns: An array of the RawRepresentable value, with all nils removed
     public func from<T: RawRepresentable>(_ field: String, defaultValue: T? = nil) throws ->
-        [T] where T.RawValue: Convertible, T.RawValue == T.RawValue.ConvertedType
-    {
+        [T] where T.RawValue: Convertible, T.RawValue == T.RawValue.ConvertedType {
         let value = try self.JSONFromField(field)
         guard let array = value as? [Any] else {
             throw MapperError.typeMismatchError(field: field, value: value, type: [Any].self)
@@ -271,8 +270,7 @@ public struct Mapper {
     ///
     /// - returns: A dictionary where the keys and values are created using their convertible implementations
     public func from<U: Convertible, T: Convertible>(_ field: String) throws -> [U: T]
-        where U == U.ConvertedType, T == T.ConvertedType
-    {
+        where U == U.ConvertedType, T == T.ConvertedType {
         let object = try self.JSONFromField(field)
         guard let data = object as? [AnyHashable: Any] else {
             throw MapperError.typeMismatchError(field: field, value: object, type: [AnyHashable: Any].self)
@@ -296,8 +294,7 @@ public struct Mapper {
     /// - returns: A dictionary where the keys and values are created using their convertible implementations
     ///            or nil if anything throws
     public func optionalFrom<U: Convertible, T: Convertible>(_ field: String) -> [U: T]?
-        where U == U.ConvertedType, T == T.ConvertedType
-    {
+        where U == U.ConvertedType, T == T.ConvertedType {
         return try? self.from(field)
     }
 
@@ -346,8 +343,6 @@ public struct Mapper {
         return (try? transformation(try self.JSONFromField(field))).flatMap { $0 }
     }
 
-    // MARK: - Private
-
     /// Get the object for a given field. If an empty string is passed, return the entire data source. This
     /// allows users to create objects from multiple fields in the top level of the data source
     ///
@@ -357,7 +352,7 @@ public struct Mapper {
     /// - throws: MapperError.missingFieldError if the field doesn't exist
     ///
     /// - returns: The object for the given field
-    private func JSONFromField(_ field: String) throws -> Any {
+    public func JSONFromField(_ field: String) throws -> Any {
         if let value = field.isEmpty ? self.JSON : self.JSON.safeValue(forKeyPath: field) {
             return value
         }

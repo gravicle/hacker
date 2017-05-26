@@ -14,9 +14,7 @@ import RxSwift
 #endif
 
 /// For more information take a look at `DelegateProxyType`.
-public class RxTextViewDelegateProxy
-    : RxScrollViewDelegateProxy
-    , UITextViewDelegate {
+public class RxTextViewDelegateProxy: RxScrollViewDelegateProxy, UITextViewDelegate {
 
     /// Typed parent object.
     public weak private(set) var textView: UITextView?

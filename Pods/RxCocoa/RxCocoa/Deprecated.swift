@@ -110,7 +110,6 @@ extension ObservableType {
         return binder(self)(curriedArgument)
     }
 
-
     /**
      Subscribes an element handler to an observable sequence.
 

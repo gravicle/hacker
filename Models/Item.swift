@@ -12,7 +12,7 @@ public class Item: NSManagedObject, JSONDecodable {
         super.init(entity: entity, insertInto: context)
 
         id = String(try map.from("id") as Int)
-        date = try map.from("created_at_i", transformation: Mapper.Transform.extractDateFromTimeInterval) as NSDate
+        date = try map.from("created_at_i", transformation: Transform.extractDateFromTimeInterval) as NSDate
         points = try map.from("points")
         author = try map.from("author")
     }

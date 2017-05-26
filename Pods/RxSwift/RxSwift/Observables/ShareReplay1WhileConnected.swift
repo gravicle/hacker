@@ -27,8 +27,7 @@ extension ObservableType {
 }
 
 fileprivate final class ShareReplay1WhileConnectedConnection<Element>
-    : ObserverType
-    , SynchronizedUnsubscribeType {
+    : ObserverType, SynchronizedUnsubscribeType {
     typealias E = Element
     typealias Observers = AnyObserver<Element>.s
     typealias DisposeKey = Observers.KeyType
@@ -78,7 +77,7 @@ fileprivate final class ShareReplay1WhileConnectedConnection<Element>
         _subscription.setDisposable(_parent._source.subscribe(self))
     }
 
-    final func _synchronized_subscribe<O : ObserverType>(_ observer: O) -> Disposable where O.E == Element {
+    final func _synchronized_subscribe<O: ObserverType>(_ observer: O) -> Disposable where O.E == Element {
         _lock.lock(); defer { _lock.unlock() }
         if let element = _element {
             observer.on(.next(element))
@@ -139,14 +138,14 @@ final fileprivate class ShareReplay1WhileConnected<Element>
         self._source = source
     }
 
-    override func subscribe<O : ObserverType>(_ observer: O) -> Disposable where O.E == E {
+    override func subscribe<O: ObserverType>(_ observer: O) -> Disposable where O.E == E {
         _lock.lock()
 
         let connection = _synchronized_subscribe(observer)
         let count = connection._observers.count
 
         let disposable = connection._synchronized_subscribe(observer)
-        
+
         if count == 0 {
             connection.connect()
         }
@@ -157,13 +156,12 @@ final fileprivate class ShareReplay1WhileConnected<Element>
     }
 
     @inline(__always)
-    private func _synchronized_subscribe<O : ObserverType>(_ observer: O) -> Connection where O.E == E {
+    private func _synchronized_subscribe<O: ObserverType>(_ observer: O) -> Connection where O.E == E {
         let connection: Connection
 
         if let existingConnection = _connection {
             connection = existingConnection
-        }
-        else {
+        } else {
             connection = ShareReplay1WhileConnectedConnection<Element>(
                 parent: self,
                 lock: _lock)

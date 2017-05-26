@@ -10,7 +10,6 @@
     import RxSwift
 #endif
 
-
 /**
  Trait that represents observable sequence with following properties:
 
@@ -56,7 +55,7 @@ extension SharedSequenceConvertibleType where SharingStrategy == DriverSharingSt
 
  **This shouldn't be used in normal release builds.**
 */
-public func driveOnScheduler(_ scheduler: SchedulerType, action: () -> ()) {
+public func driveOnScheduler(_ scheduler: SchedulerType, action: () -> Void) {
     let originalObserveOnScheduler = driverObserveOnScheduler
     driverObserveOnScheduler = scheduler
 

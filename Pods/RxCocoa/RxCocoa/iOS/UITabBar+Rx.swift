@@ -21,7 +21,7 @@ extension Reactive where Base: UITabBar {
 
     /// Reactive wrapper for `delegate` message `tabBar:willBeginCustomizingItems:`.
     public var willBeginCustomizing: ControlEvent<[UITabBarItem]> {
-        
+
         let source = delegate.methodInvoked(#selector(UITabBarDelegate.tabBar(_:willBeginCustomizing:)))
             .map { a in
                 return try castOrThrow([UITabBarItem].self, a[1])
@@ -71,7 +71,7 @@ extension Reactive where Base: UITabBar {
  iOS and tvOS
  */
 extension UITabBar {
-    
+
     /// Factory method that enables subclasses to implement their own `delegate`.
     ///
     /// - returns: Instance of delegate proxy that wraps `delegate`.

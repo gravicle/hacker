@@ -1,6 +1,6 @@
 import Mapper
 
-extension Mapper.Transform {
+extension Transform {
 
     static func extractDateFromTimeInterval(value: Any?) throws -> Date {
         guard let seconds = value as? Int else {

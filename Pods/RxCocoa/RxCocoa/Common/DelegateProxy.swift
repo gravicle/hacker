@@ -21,20 +21,20 @@ var dataSourceAssociatedTag: UnsafeRawPointer = UnsafeRawPointer(UnsafeMutablePo
 /// Base class for `DelegateProxyType` protocol.
 ///
 /// This implementation is not thread safe and can be used only from one thread (Main thread).
-open class DelegateProxy : _RXDelegateProxy {
+open class DelegateProxy: _RXDelegateProxy {
 
     private var sentMessageForSelector = [Selector: MessageDispatcher]()
     private var methodInvokedForSelector = [Selector: MessageDispatcher]()
 
     /// Parent object associated with delegate proxy.
     weak private(set) var parentObject: AnyObject?
-    
+
     /// Initializes new instance.
     ///
     /// - parameter parentObject: Optional parent object that owns `DelegateProxy` as associated object.
     public required init(parentObject: AnyObject) {
         self.parentObject = parentObject
-        
+
         MainScheduler.ensureExecutingOnScheduler()
 #if TRACE_RESOURCES
         _ = Resources.incrementTotal()
@@ -89,11 +89,10 @@ open class DelegateProxy : _RXDelegateProxy {
         checkSelectorIsObservable(selector)
 
         let subject = sentMessageForSelector[selector]
-        
+
         if let subject = subject {
             return subject.asObservable()
-        }
-        else {
+        } else {
             let subject = MessageDispatcher(delegateProxy: self)
             sentMessageForSelector[selector] = subject
             return subject.asObservable()
@@ -150,8 +149,7 @@ open class DelegateProxy : _RXDelegateProxy {
 
         if let subject = subject {
             return subject.asObservable()
-        }
-        else {
+        } else {
             let subject = MessageDispatcher(delegateProxy: self)
             methodInvokedForSelector[selector] = subject
             return subject.asObservable()
@@ -187,14 +185,14 @@ open class DelegateProxy : _RXDelegateProxy {
     open class func delegateAssociatedObjectTag() -> UnsafeRawPointer {
         return delegateAssociatedTag
     }
-    
+
     /// Initializes new instance of delegate proxy.
     ///
     /// - returns: Initialized instance of `self`.
     open class func createProxyForObject(_ object: AnyObject) -> AnyObject {
         return self.init(parentObject: object)
     }
-    
+
     /// Returns assigned proxy for object.
     ///
     /// - parameter object: Object that can have assigned delegate proxy.
@@ -203,17 +201,17 @@ open class DelegateProxy : _RXDelegateProxy {
         let maybeDelegate = objc_getAssociatedObject(object, self.delegateAssociatedObjectTag())
         return castOptionalOrFatalError(maybeDelegate.map { $0 as AnyObject })
     }
-    
+
     /// Assigns proxy to object.
     ///
     /// - parameter object: Object that can have assigned delegate proxy.
     /// - parameter proxy: Delegate proxy object to assign to `object`.
     open class func assignProxy(_ proxy: AnyObject, toObject object: AnyObject) {
         precondition(proxy.isKind(of: self.classForCoder()))
-       
+
         objc_setAssociatedObject(object, self.delegateAssociatedObjectTag(), proxy, .OBJC_ASSOCIATION_RETAIN)
     }
-    
+
     /// Sets reference of normal delegate that receives all forwarded messages
     /// through `self`.
     ///
@@ -226,7 +224,7 @@ open class DelegateProxy : _RXDelegateProxy {
         self._setForward(toDelegate: delegate, retainDelegate: retainDelegate)
         self.reset()
     }
-   
+
     /// Returns reference of normal delegate that receives all forwarded messages
     /// through `self`.
     ///
@@ -239,7 +237,7 @@ open class DelegateProxy : _RXDelegateProxy {
         return (sentMessageForSelector[selector]?.hasObservers ?? false)
             || (methodInvokedForSelector[selector]?.hasObservers ?? false)
     }
-    
+
     override open func responds(to aSelector: Selector!) -> Bool {
         return super.responds(to: aSelector)
             || (self._forwardToDelegate?.responds(to: aSelector) ?? false)
@@ -251,7 +249,7 @@ open class DelegateProxy : _RXDelegateProxy {
             rxFatalErrorInDebug("\(self) doesn't implement delegate proxy type.")
             return
         }
-        
+
         guard let parentObject = self.parentObject else { return }
 
         let selfType = type(of: delegateProxySelf)
@@ -295,7 +293,7 @@ fileprivate final class MessageDispatcher {
             .subscribeOn(mainScheduler)
     }
 
-    var on: (Event<[Any]>) -> () {
+    var on: (Event<[Any]>) -> Void {
         return self.dispatcher.on
     }
 
@@ -307,5 +305,5 @@ fileprivate final class MessageDispatcher {
         return self.result
     }
 }
-    
+
 #endif

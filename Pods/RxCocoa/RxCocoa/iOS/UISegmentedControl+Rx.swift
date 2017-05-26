@@ -13,13 +13,12 @@ import UIKit
 import RxSwift
 #endif
 
-
 extension Reactive where Base: UISegmentedControl {
     /// Reactive wrapper for `selectedSegmentIndex` property.
     public var selectedSegmentIndex: ControlProperty<Int> {
         return value
     }
-    
+
     /// Reactive wrapper for `selectedSegmentIndex` property.
     public var value: ControlProperty<Int> {
         return UIControl.rx.value(
@@ -31,7 +30,7 @@ extension Reactive where Base: UISegmentedControl {
             }
         )
     }
-    
+
 }
 
 #endif

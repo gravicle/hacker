@@ -47,7 +47,6 @@ to replace dealloc method. In case that isn't the case, it should be ok.
 */
 extension Reactive where Base: NSObject {
 
-
     /**
      Observes values on `keyPath` starting from `self` with `options` and retains `self` if `retainSelf` is set.
 
@@ -100,7 +99,7 @@ extension Reactive where Base: NSObject {
 
 // Dealloc
 extension Reactive where Base: AnyObject {
-    
+
     /**
     Observable sequence of object deallocated events.
     
@@ -145,8 +144,7 @@ extension Reactive where Base: AnyObject {
             do {
                 let proxy: MessageSentProxy = try registerMessageInterceptor(selector)
                 return proxy.messageSent.asObservable()
-            }
-            catch let e {
+            } catch let e {
                 return Observable.error(e)
             }
         }
@@ -171,12 +169,10 @@ extension Reactive where Base: AnyObject {
                 return deallocated.map { _ in [] }
             }
 
-
             do {
                 let proxy: MessageSentProxy = try registerMessageInterceptor(selector)
                 return proxy.methodInvoked.asObservable()
-            }
-            catch let e {
+            } catch let e {
                 return Observable.error(e)
             }
         }
@@ -197,8 +193,7 @@ extension Reactive where Base: AnyObject {
             do {
                 let proxy: DeallocatingProxy = try registerMessageInterceptor(deallocSelector)
                 return proxy.messageSent.asObservable()
-            }
-            catch let e {
+            } catch let e {
                 return Observable.error(e)
             }
         }
@@ -211,8 +206,7 @@ extension Reactive where Base: AnyObject {
         let subject: T
         if let existingSubject = objc_getAssociatedObject(base, selectorReference) as? T {
             subject = existingSubject
-        }
-        else {
+        } else {
             subject = T()
             objc_setAssociatedObject(
                 base,
@@ -253,9 +247,7 @@ extension Reactive where Base: AnyObject {
         var targetImplementation: IMP { get set }
     }
 
-    fileprivate final class DeallocatingProxy
-        : MessageInterceptorSubject
-        , RXDeallocatingObserver {
+    fileprivate final class DeallocatingProxy: MessageInterceptorSubject, RXDeallocatingObserver {
         typealias E = ()
 
         let messageSent = ReplaySubject<()>.create(bufferSize: 1)
@@ -269,7 +261,7 @@ extension Reactive where Base: AnyObject {
         init() {
         }
 
-        @objc func deallocating() -> Void {
+        @objc func deallocating() {
             messageSent.on(.next())
         }
 
@@ -278,9 +270,7 @@ extension Reactive where Base: AnyObject {
         }
     }
 
-    fileprivate final class MessageSentProxy
-        : MessageInterceptorSubject
-        , RXMessageSentObserver {
+    fileprivate final class MessageSentProxy: MessageInterceptorSubject, RXMessageSentObserver {
         typealias E = [AnyObject]
 
         let messageSent = PublishSubject<[Any]>()
@@ -295,11 +285,11 @@ extension Reactive where Base: AnyObject {
         init() {
         }
 
-        @objc func messageSent(withArguments arguments: [Any]) -> Void {
+        @objc func messageSent(withArguments arguments: [Any]) {
             messageSent.on(.next(arguments))
         }
 
-        @objc func methodInvoked(withArguments arguments: [Any]) -> Void {
+        @objc func methodInvoked(withArguments arguments: [Any]) {
             methodInvoked.on(.next(arguments))
         }
 
@@ -310,7 +300,6 @@ extension Reactive where Base: AnyObject {
     }
 
 #endif
-
 
 fileprivate final class DeallocObservable {
     let _subject = ReplaySubject<Void>.create(bufferSize:1)
@@ -335,12 +324,10 @@ fileprivate protocol KVOObservableProtocol {
     var options: NSKeyValueObservingOptions { get }
 }
 
-fileprivate final class KVOObserver
-    : _RXKVOObserver
-    , Disposable {
+fileprivate final class KVOObserver: _RXKVOObserver, Disposable {
     typealias Callback = (Any?) -> Void
 
-    var retainSelf: KVOObserver? = nil
+    var retainSelf: KVOObserver?
 
     init(parent: KVOObservableProtocol, callback: @escaping Callback) {
         #if TRACE_RESOURCES
@@ -364,8 +351,7 @@ fileprivate final class KVOObserver
 }
 
 fileprivate final class KVOObservable<Element>
-    : ObservableType
-    , KVOObservableProtocol {
+    : ObservableType, KVOObservableProtocol {
     typealias E = Element?
 
     unowned var target: AnyObject
@@ -385,7 +371,7 @@ fileprivate final class KVOObservable<Element>
         }
     }
 
-    func subscribe<O : ObserverType>(_ observer: O) -> Disposable where O.E == Element? {
+    func subscribe<O: ObserverType>(_ observer: O) -> Disposable where O.E == Element? {
         let observer = KVOObserver(parent: self) { (value) in
             if value as? NSNull != nil {
                 observer.on(.next(nil))
@@ -411,8 +397,7 @@ fileprivate final class KVOObservable<Element>
 
         if !options.intersection(.initial).isEmpty {
             return observable
-        }
-        else {
+        } else {
             return observable
                 .skip(1)
         }
@@ -484,12 +469,11 @@ fileprivate final class KVOObservable<Element>
                 let nextElementsObservable = keyPathSections.count == 1
                     ? Observable.just(nextTarget)
                     : observeWeaklyKeyPathFor(nextObject!, keyPathSections: remainingPaths, options: options)
-                
+
                 if isWeak {
                     return nextElementsObservable
                         .finishWithNilWhenDealloc(nextObject!)
-                }
-                else {
+                } else {
                     return nextElementsObservable
                 }
         }
@@ -520,11 +504,11 @@ extension Reactive where Base: AnyObject {
         if let value = objc_getAssociatedObject(base, key) {
             return value as! T
         }
-        
+
         let observable = createCachedObservable()
-        
+
         objc_setAssociatedObject(base, key, observable, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        
+
         return observable
     }
 }

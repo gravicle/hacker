@@ -15,24 +15,19 @@ import RxSwift
 
 let tableViewDataSourceNotSet = TableViewDataSourceNotSet()
 
-final class TableViewDataSourceNotSet
-    : NSObject
-    , UITableViewDataSource {
+final class TableViewDataSourceNotSet: NSObject, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         rxAbstractMethod(message: dataSourceNotSet)
     }
 }
 
 /// For more information take a look at `DelegateProxyType`.
-public class RxTableViewDataSourceProxy
-    : DelegateProxy
-    , UITableViewDataSource
-    , DelegateProxyType {
+public class RxTableViewDataSourceProxy: DelegateProxy, UITableViewDataSource, DelegateProxyType {
 
     /// Typed parent object.
     public weak fileprivate(set) var tableView: UITableView?
@@ -58,7 +53,7 @@ public class RxTableViewDataSourceProxy
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return (_requiredMethodsDataSource ?? tableViewDataSourceNotSet).tableView(tableView, cellForRowAt: indexPath)
     }
-    
+
     // MARK: proxy
 
     /// For more information take a look at `DelegateProxyType`.

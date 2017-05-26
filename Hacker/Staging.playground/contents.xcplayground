@@ -3,5 +3,6 @@
     <pages>
         <page name='CoreDataDesign'/>
         <page name='InitialModels'/>
+        <page name='ModelTests'/>
     </pages>
 </playground>

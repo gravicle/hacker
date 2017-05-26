@@ -25,17 +25,17 @@ extension ObservableType {
 final fileprivate class ElementAtSink<O: ObserverType> : Sink<O>, ObserverType {
     typealias SourceType = O.E
     typealias Parent = ElementAt<SourceType>
-    
+
     let _parent: Parent
     var _i: Int
-    
+
     init(parent: Parent, observer: O, cancel: Cancelable) {
         _parent = parent
         _i = parent._index
-        
+
         super.init(observer: observer, cancel: cancel)
     }
-    
+
     func on(_ event: Event<SourceType>) {
         switch event {
         case .next(_):
@@ -45,15 +45,15 @@ final fileprivate class ElementAtSink<O: ObserverType> : Sink<O>, ObserverType {
                 forwardOn(.completed)
                 self.dispose()
             }
-            
+
             do {
-                let _ = try decrementChecked(&_i)
+                _ = try decrementChecked(&_i)
             } catch(let e) {
                 forwardOn(.error(e))
                 dispose()
                 return
             }
-            
+
         case .error(let e):
             forwardOn(.error(e))
             self.dispose()
@@ -63,18 +63,18 @@ final fileprivate class ElementAtSink<O: ObserverType> : Sink<O>, ObserverType {
             } else {
                 forwardOn(.completed)
             }
-            
+
             self.dispose()
         }
     }
 }
 
 final fileprivate class ElementAt<SourceType> : Producer<SourceType> {
-    
+
     let _source: Observable<SourceType>
     let _throwOnEmpty: Bool
     let _index: Int
-    
+
     init(source: Observable<SourceType>, index: Int, throwOnEmpty: Bool) {
         if index < 0 {
             rxFatalError("index can't be negative")
@@ -84,7 +84,7 @@ final fileprivate class ElementAt<SourceType> : Producer<SourceType> {
         self._index = index
         self._throwOnEmpty = throwOnEmpty
     }
-    
+
     override func run<O: ObserverType>(_ observer: O, cancel: Cancelable) -> (sink: Disposable, subscription: Disposable) where O.E == SourceType {
         let sink = ElementAtSink(parent: self, observer: observer, cancel: cancel)
         let subscription = _source.subscribe(sink)

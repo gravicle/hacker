@@ -18,7 +18,7 @@ extension Reactive where Base: UITextField {
     public var text: ControlProperty<String?> {
         return value
     }
-    
+
     /// Reactive wrapper for `text` property.
     public var value: ControlProperty<String?> {
         return UIControl.rx.value(
@@ -35,7 +35,7 @@ extension Reactive where Base: UITextField {
             }
         )
     }
-    
+
 }
 
 #endif
