@@ -1,0 +1,19 @@
+PODS:
+  - Nimble (7.0.0)
+  - RxCocoa (3.4.1):
+    - RxSwift (~> 3.4)
+  - RxSwift (3.4.1)
+
+DEPENDENCIES:
+  - Nimble
+  - RxCocoa
+  - RxSwift
+
+SPEC CHECKSUMS:
+  Nimble: 874982b605d4d752fcac6be695d13c502de84b1b
+  RxCocoa: a8a5f1d061d0043e28f56976829f31ce63e8eb09
+  RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
+
+PODFILE CHECKSUM: dba3558a9e2d8632e6b4bbe9a8b3bfab4146600f
+
+COCOAPODS: 1.2.1
