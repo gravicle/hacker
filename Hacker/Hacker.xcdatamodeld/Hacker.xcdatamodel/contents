@@ -1,4 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Comment" representedClassName="Comment" parentEntity="Item" syncable="YES" codeGenerationType="category">
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="children" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Comment" inverseName="parentComment" inverseEntity="Comment" syncable="YES"/>
+        <relationship name="parentComment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Comment" inverseName="children" inverseEntity="Comment" syncable="YES"/>
+        <relationship name="story" maxCount="1" deletionRule="Nullify" destinationEntity="Story" inverseName="comments" inverseEntity="Story" syncable="YES"/>
+    </entity>
+    <entity name="Item" representedClassName="Item" isAbstract="YES" syncable="YES" codeGenerationType="category">
+        <attribute name="author" attributeType="String" syncable="YES"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="id" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="points" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Story" representedClassName="Story" parentEntity="Item" syncable="YES" codeGenerationType="category">
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="comments" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Comment" inverseName="story" inverseEntity="Comment" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Comment" positionX="144" positionY="117" width="128" height="105"/>
+        <element name="Item" positionX="36" positionY="54" width="128" height="105"/>
+        <element name="Story" positionX="234" positionY="126" width="128" height="105"/>
+    </elements>
 </model>

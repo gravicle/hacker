@@ -1,0 +1,1041 @@
+{
+  "id": 3742902,
+  "created_at": "2012-03-23T00:40:39.000Z",
+  "created_at_i": 1332463239,
+  "type": "story",
+  "author": "olalonde",
+  "title": "Show HN: This up votes itself",
+  "url": "http://news.ycombinator.com/vote?for=3742902\u0026dir=up\u0026whence=%6e%65%77%65%73%74",
+  "text": "",
+  "points": 3381,
+  "children": [
+    {
+      "id": 3743110,
+      "created_at": "2012-03-23T01:28:58.000Z",
+      "created_at_i": 1332466138,
+      "type": "comment",
+      "author": "palish",
+      "text": "\u003Cp\u003EI exploited this about 5 years ago. (I think it was called \"Startup News\" back then, though!)\u003C/p\u003E\u003Cp\u003E\u003Ca href=\"http://news.ycombinator.com/item?id=27615\" rel=\"nofollow\"\u003Ehttp://news.ycombinator.com/item?id=27615\u003C/a\u003E\u003C/p\u003E\u003Cp\u003EI think you need to set \"showdead\" in your profile to see this. It got killed pretty quickly, but netted me ~150 karma which was amusingly nontrivial back then. And as a byproduct, I think I became the first \"public member\" to get a glimpse of Arc, which was closed-source at the time. I won't disclose how (since I haven't asked for permission to share the details) but it was pretty much one of the happiest days of my life, for some stupid reason. I was young and giddy and felt like I'd just won something special.\u003C/p\u003E\u003Cp\u003ETo give you an idea of how ancient this is, check out the id of the thread -- only #27,615. Man, time flies when you're watching a community grow, eh? It's like watching a child mature over years -- into an increasingly-annoying version of themselves while slowly getting fatter and fatter over the years, of course. (I kid, I kid.)\u003C/p\u003E\u003Cp\u003EBonus: I just now noticed that I'd gotten into a debate with Paul B in that thread. Hah. I was too cocky back then... I should have been listening and asking questions, not talking!\u003C/p\u003E\u003Cp\u003EMan, I miss those days so much. I never knew how rare they were until they were gone. Like, my girlfriend (now wife) and I went on vacation, during which we prototyped and launched a whole webapp in Rails 1.0! Who does that? Not me, anymore -- At least, not until I lose my day job like a bad case of music. Makes me wonder if I still have my old \"hey, I'm 18 and ignorant of my own flaws!\" level of productivity...\u003C/p\u003E\u003Cp\u003E====\u003C/p\u003E\u003Cp\u003EEDIT: Oh, look. I have the attention of the majority of HN. Allow me to now exploit you:\u003C/p\u003E\u003Cp\u003ETo whomever has read upto here: you hereby implicitly agree my EULA, in which you swear to enjoy each of your scientific pursuits with intensity and to your fullest degree; and sometimes even to a dangerous degree, if the mood carries you thus. Additionally, you agree to never allow an employer, family member, or any other authority to break your intrinsic spirit; for they have no means of dominating your spirit except that which you subconsciously allow them.  You shall be true to yourself and to your own principles, regardless of society (though in privacy). You shall hereby refuse to believe any scientific statement as \"true\", however benign, except those in which you alone have proven to yourself to be true, by your own hand and evidence. (Though it doesn't hurt to check out what other people have to say on the subject, from time to time; in fact, it turns out to often be a more valuable course of action, for the careful analysis of a close friend can often reveal subtle flaws in your process and in your logic, while occasionally forcing you to re-evaluate your core reasoning for choosing that process in the first place, which \u003Ci\u003Ealways\u003C/i\u003E leads to the path of learning and thus improvement and satisfaction.)  You agree to eventually die with no regrets. Let no one impose themselves upon your judgement without merit. You shall endeavor to enjoy life to the fullest extent of the law (where applicable), and  to realize that money is merely a means, not an end unto itself. In your spare time, you shall research that which is impossible, but intriguing, in order to always have something to strive for, thereby improving your skill and your spirit. You shall follow your curiosity wherever it leads (but keep both eyes open for signs of danger).\u003C/p\u003E\u003Cp\u003EMost importantly: thou shalt enjoy every week, else thou shalt fix your life's situation regardless of how immutable it may seem.\u003C/p\u003E\u003Cp\u003EGo -- build something out of passion. Right now!\u003C/p\u003E",
+      "points": 44,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": [
+        {
+          "id": 3743174,
+          "created_at": "2012-03-23T01:43:28.000Z",
+          "created_at_i": 1332467008,
+          "type": "comment",
+          "author": "srl",
+          "text": "\u003Cp\u003E\u0026#62; Bonus: I just noticed I'd gotten into a debate with Paul B in that thread. Hah. I was too cocky back then... I should have been listening, not talking!\u003C/p\u003E\u003Cp\u003EOT but funny story: back when I was first getting into programming heavily (I had dabbled for about 4 years, but wasn't particularly good), I started learning perl, and got into a flame war on freenode with some random guy I had never seen on before (in the three times I had visited). It was weird - everybody sided with him, so strongly that I was really confused. His username was strange, too - something about \"toady\".\u003C/p\u003E\u003Cp\u003EYup, I, a perl programmer of 2 weeks, got into a flame war with Larry Wall. Didn't realize it for years, until I saw his IRC nick mentioned somewhere else. Ouch.\u003C/p\u003E",
+          "points": 28,
+          "parent_id": 3743110,
+          "story_id": 3742902,
+          "children": []
+        },
+        {
+          "id": 3743163,
+          "created_at": "2012-03-23T01:41:04.000Z",
+          "created_at_i": 1332466864,
+          "type": "comment",
+          "author": "ma2rten",
+          "text": "\u003Cp\u003EI found this a little bit ironic (no blame on pg, he does have more important things to do):\u003C/p\u003E\u003Cp\u003Epg 1744 days ago\u003C/p\u003E\u003Cp\u003EOk, will fix.\u003C/p\u003E",
+          "points": 11,
+          "parent_id": 3743110,
+          "story_id": 3742902,
+          "children": []
+        },
+        {
+          "id": 3743425,
+          "created_at": "2012-03-23T03:01:16.000Z",
+          "created_at_i": 1332471676,
+          "type": "comment",
+          "author": "swiecki",
+          "text": "\u003Cp\u003E\u0026#62;\u0026#62; EDIT: Oh, look. I have the attention of the majority of HN. Allow me to now exploit you:\u003C/p\u003E\u003Cp\u003EYour edit is the best thing to come out of this entire ordeal. Thanks for not abusing your newfound fame :)\u003C/p\u003E",
+          "points": 4,
+          "parent_id": 3743110,
+          "story_id": 3742902,
+          "children": []
+        },
+        {
+          "id": 3743167,
+          "created_at": "2012-03-23T01:42:03.000Z",
+          "created_at_i": 1332466923,
+          "type": "comment",
+          "author": "wizard_2",
+          "text": "\u003Cp\u003EHehe, PG went to fix it too.\u003C/p\u003E\u003Cp\u003E\u003Ca href=\"http://news.ycombinator.com/item?id=27686\" rel=\"nofollow\"\u003Ehttp://news.ycombinator.com/item?id=27686\u003C/a\u003E\u003C/p\u003E",
+          "points": 2,
+          "parent_id": 3743110,
+          "story_id": 3742902,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": 3742928,
+      "created_at": "2012-03-23T00:46:23.000Z",
+      "created_at_i": 1332463583,
+      "type": "comment",
+      "author": "olalonde",
+      "text": "\u003Cp\u003ECredits to \u003Ca href=\"http://news.ycombinator.com/item?id=3742742\" rel=\"nofollow\"\u003Ehttp://news.ycombinator.com/item?id=3742742\u003C/a\u003E (GreekOphion) for finding the bug.\u003C/p\u003E",
+      "points": 17,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": [
+        {
+          "id": 3742962,
+          "created_at": "2012-03-23T00:53:37.000Z",
+          "created_at_i": 1332464017,
+          "type": "comment",
+          "author": "GreekOphion",
+          "text": "\u003Cp\u003EWow, your getting more votes than I did.\u003C/p\u003E",
+          "points": 24,
+          "parent_id": 3742928,
+          "story_id": 3742902,
+          "children": [
+            {
+              "id": 3742979,
+              "created_at": "2012-03-23T00:58:23.000Z",
+              "created_at_i": 1332464303,
+              "type": "comment",
+              "author": "olalonde",
+              "text": "\u003Cp\u003E\"It's all about the execution\", \"Usability counts\", \"Ideas are worthless\", yadda yadda... Joking aside, congrats on finding the bug. I would send you the karma if I could!\u003C/p\u003E",
+              "points": 13,
+              "parent_id": 3742962,
+              "story_id": 3742902,
+              "children": []
+            },
+            {
+              "id": 3742973,
+              "created_at": "2012-03-23T00:56:10.000Z",
+              "created_at_i": 1332464170,
+              "type": "comment",
+              "author": "yangez",
+              "text": "\u003Cp\u003EHe worded the post in a much more compelling way.\u003C/p\u003E",
+              "points": 5,
+              "parent_id": 3742962,
+              "story_id": 3742902,
+              "children": []
+            },
+            {
+              "id": 3742969,
+              "created_at": "2012-03-23T00:55:11.000Z",
+              "created_at_i": 1332464111,
+              "type": "comment",
+              "author": "Vaanir",
+              "text": "\u003Cp\u003EIf only the link you had in your OP was clickable..\u003C/p\u003E",
+              "points": 2,
+              "parent_id": 3742962,
+              "story_id": 3742902,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": 3742960,
+          "created_at": "2012-03-23T00:53:10.000Z",
+          "created_at_i": 1332463990,
+          "type": "comment",
+          "author": "kylec",
+          "text": "\u003Cp\u003EEnjoy your HN karma, I hope you're allowed to keep it!\u003C/p\u003E",
+          "points": 4,
+          "parent_id": 3742928,
+          "story_id": 3742902,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": 3742988,
+      "created_at": "2012-03-23T01:00:31.000Z",
+      "created_at_i": 1332464431,
+      "type": "comment",
+      "author": "cs702",
+      "text": "\u003Cp\u003EThis looks set to become the all-time #1-ranked submission soon.  Compare it to other top-ranked submissions here: \u003Ca href=\"http://www.hnsearch.com/search#request/all\u0026#38;q=+\u0026#38;sortby=points+desc\" rel=\"nofollow\"\u003Ehttp://www.hnsearch.com/search#request/all\u0026#38;q=+\u0026#38;sortb...\u003C/a\u003E\u003C/p\u003E\u003Cp\u003E[EDIT: corrected link.  Thanks ma2rten!]\u003C/p\u003E",
+      "points": 6,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": [
+        {
+          "id": 3742991,
+          "created_at": "2012-03-23T01:01:47.000Z",
+          "created_at_i": 1332464507,
+          "type": "comment",
+          "author": "akavi",
+          "text": "\u003Cp\u003EThat list is clearly not comprehensive (For example, there were multiple Steve Jobs related submissions that got over 1000 points).\u003C/p\u003E",
+          "points": 2,
+          "parent_id": 3742988,
+          "story_id": 3742902,
+          "children": [
+            {
+              "id": 3742998,
+              "created_at": "2012-03-23T01:03:50.000Z",
+              "created_at_i": 1332464630,
+              "type": "comment",
+              "author": "ma2rten",
+              "text": "\u003Cp\u003EYep, \u003Ca href=\"http://www.hnsearch.com/search#request/all\u0026#38;q=+\u0026#38;sortby=points+desc\" rel=\"nofollow\"\u003Ehttp://www.hnsearch.com/search#request/all\u0026#38;q=+\u0026#38;sortb...\u003C/a\u003E\u003C/p\u003E\u003Cp\u003EEDIT: You are welcome. I am not sure this is comprehensive either, though. For one it will only include submissions with a space in the title, I think.\u003C/p\u003E",
+              "points": 2,
+              "parent_id": 3742991,
+              "story_id": 3742902,
+              "children": [
+                {
+                  "id": 3743072,
+                  "created_at": "2012-03-23T01:19:45.000Z",
+                  "created_at_i": 1332465585,
+                  "type": "comment",
+                  "author": "cs702",
+                  "text": "\u003Cp\u003EStill, much better than what I got with /over?points= ...\u003C/p\u003E",
+                  "points": 1,
+                  "parent_id": 3742998,
+                  "story_id": 3742902,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3743028,
+      "created_at": "2012-03-23T01:10:11.000Z",
+      "created_at_i": 1332465011,
+      "type": "comment",
+      "author": "numlocked",
+      "text": "\u003Cp\u003EAn interesting side effect may be to drive registrations, as it will appear to non logged-in users that they have to create an account before viewing the #1 item.\u003C/p\u003E",
+      "points": 6,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": []
+    },
+    {
+      "id": 3742996,
+      "created_at": "2012-03-23T01:03:34.000Z",
+      "created_at_i": 1332464614,
+      "type": "comment",
+      "author": "dustingetz",
+      "text": "\u003Cp\u003Eis OP a mod? how did he know what his postid would be before he submitted it? spraying [sequential] submissions all at once?\u003C/p\u003E\u003Cp\u003E[edit]\u003C/p\u003E",
+      "points": 5,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": [
+        {
+          "id": 3743008,
+          "created_at": "2012-03-23T01:06:18.000Z",
+          "created_at_i": 1332464778,
+          "type": "comment",
+          "author": "citricsquid",
+          "text": "\u003Cp\u003EIDs are sequential, you can predict them with ease. For example (without editing) I can tell you my comment ID (for this comment) will be: 3743005\u003C/p\u003E\u003Cp\u003E(edit: nope, I was 3 off, you get the point though, apparently a lot of people are commenting at the moment, ha)\u003C/p\u003E",
+          "points": 6,
+          "parent_id": 3742996,
+          "story_id": 3742902,
+          "children": [
+            {
+              "id": 3743015,
+              "created_at": "2012-03-23T01:07:52.000Z",
+              "created_at_i": 1332464872,
+              "type": "comment",
+              "author": "olalonde",
+              "text": "\u003Cp\u003EYes, that's how I did it. Took me about 3 attempts.\u003C/p\u003E",
+              "points": 11,
+              "parent_id": 3743008,
+              "story_id": 3742902,
+              "children": []
+            },
+            {
+              "id": 3743013,
+              "created_at": "2012-03-23T01:07:34.000Z",
+              "created_at_i": 1332464854,
+              "type": "comment",
+              "author": "youareincorrect",
+              "text": "\u003Cp\u003EConfirmed.\u003C/p\u003E",
+              "points": -4,
+              "parent_id": 3743008,
+              "story_id": 3742902,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": 3743012,
+          "created_at": "2012-03-23T01:06:48.000Z",
+          "created_at_i": 1332464808,
+          "type": "comment",
+          "author": "icebraining",
+          "text": "\u003Cp\u003EAren't they sequential? Isn't it just a matter of using the ID of the latest post + 1?\u003C/p\u003E",
+          "points": 3,
+          "parent_id": 3742996,
+          "story_id": 3742902,
+          "children": []
+        },
+        {
+          "id": 3743014,
+          "created_at": "2012-03-23T01:07:40.000Z",
+          "created_at_i": 1332464860,
+          "type": "comment",
+          "author": "SeoxyS",
+          "text": "\u003Cp\u003ECouldn't he have edited the url after posting it?\u003C/p\u003E",
+          "points": 2,
+          "parent_id": 3742996,
+          "story_id": 3742902,
+          "children": [
+            {
+              "id": 3743020,
+              "created_at": "2012-03-23T01:09:05.000Z",
+              "created_at_i": 1332464945,
+              "type": "comment",
+              "author": "GreekOphion",
+              "text": "\u003Cp\u003ENo, that's impossible.\u003C/p\u003E",
+              "points": 3,
+              "parent_id": 3743014,
+              "story_id": 3742902,
+              "children": [
+                {
+                  "id": 3743055,
+                  "created_at": "2012-03-23T01:14:46.000Z",
+                  "created_at_i": 1332465286,
+                  "type": "comment",
+                  "author": "SeoxyS",
+                  "text": "\u003Cp\u003ELink it to a php file on your server, and edit the php file to header('Location: the_actual_url') after the fact.\u003C/p\u003E",
+                  "points": 7,
+                  "parent_id": 3743020,
+                  "story_id": 3742902,
+                  "children": [
+                    {
+                      "id": 3743093,
+                      "created_at": "2012-03-23T01:23:39.000Z",
+                      "created_at_i": 1332465819,
+                      "type": "comment",
+                      "author": "d3ad1ysp0rk",
+                      "text": "\u003Cp\u003EThat isn't what is happening though, hover over the link and its a direct link to HN.\u003C/p\u003E",
+                      "points": 1,
+                      "parent_id": 3743055,
+                      "story_id": 3742902,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3743004,
+          "created_at": "2012-03-23T01:05:46.000Z",
+          "created_at_i": 1332464746,
+          "type": "comment",
+          "author": "GreekOphion",
+          "text": "\u003Cp\u003EI was trying to figure that out too.\u003C/p\u003E",
+          "points": 1,
+          "parent_id": 3742996,
+          "story_id": 3742902,
+          "children": [
+            {
+              "id": 3743022,
+              "created_at": "2012-03-23T01:09:28.000Z",
+              "created_at_i": 1332464968,
+              "type": "comment",
+              "author": "citricsquid",
+              "text": "\u003Cp\u003Ean ID can refer to a comment or a link, you can find the latest comments: \u003Ca href=\"http://news.ycombinator.com/newcomments\" rel=\"nofollow\"\u003Ehttp://news.ycombinator.com/newcomments\u003C/a\u003E latest links: \u003Ca href=\"http://news.ycombinator.com/newest\" rel=\"nofollow\"\u003Ehttp://news.ycombinator.com/newest\u003C/a\u003E\u003C/p\u003E\u003Cp\u003EThe easiest way to do it would be to pick an ID in the future (say 20 ahead of the latest one) then type the title and link out, then just keep refreshing the page for your selected ID minus one (for example, if your chosen ID is 3743040 refresh news.ycombinator.com/item?id=3743039) until you get a result then hit submit, if you're not too slow you'll get the ID 3743040.\u003C/p\u003E",
+              "points": 3,
+              "parent_id": 3743004,
+              "story_id": 3742902,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3742945,
+      "created_at": "2012-03-23T00:49:32.000Z",
+      "created_at_i": 1332463772,
+      "type": "comment",
+      "author": "akavi",
+      "text": "\u003Cp\u003EIt's amusing watching the vote count skyrocket upward as the curious click on it. It's getting more than a vote a second.\u003C/p\u003E\u003Cp\u003ESide Note: I've always wondered why HN doesn't let you reneg on your upvote. I imagine this would have a good deal fewer votes if people could.\u003C/p\u003E",
+      "points": 5,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": []
+    },
+    {
+      "id": 3742974,
+      "created_at": "2012-03-23T00:56:25.000Z",
+      "created_at_i": 1332464185,
+      "type": "comment",
+      "author": "im3w1l",
+      "text": "\u003Cp\u003EThe amount of people proposing POST as a solution, shows the need for this subject to be lifted. There are methods for auto-posting you know...\u003C/p\u003E",
+      "points": 5,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": [
+        {
+          "id": 3743241,
+          "created_at": "2012-03-23T02:05:49.000Z",
+          "created_at_i": 1332468349,
+          "type": "comment",
+          "author": "getsat",
+          "text": "\u003Cp\u003EPOST alone isn't sufficient.  You need CSRF protection, too (which, in this case, would protect from same-site request forgery).\u003C/p\u003E",
+          "points": 1,
+          "parent_id": 3742974,
+          "story_id": 3742902,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": 3743064,
+      "created_at": "2012-03-23T01:17:48.000Z",
+      "created_at_i": 1332465468,
+      "type": "comment",
+      "author": "dsrguru",
+      "text": "\u003Cp\u003EIf allowed to continue without intervention or a bug fix, this thread will stay at the top of HN forever.\u003C/p\u003E",
+      "points": 4,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": []
+    },
+    {
+      "id": 3743142,
+      "created_at": "2012-03-23T01:36:28.000Z",
+      "created_at_i": 1332466588,
+      "type": "comment",
+      "author": "olalonde",
+      "text": "\u003Cp\u003EThis is officially the 2nd highest ranking post ever. \u003Ca href=\"http://www.hnsearch.com/search#request/all\u0026#38;q=+\u0026#38;sortby=points+desc\" rel=\"nofollow\"\u003Ehttp://www.hnsearch.com/search#request/all\u0026#38;q=+\u0026#38;sortb...\u003C/a\u003E (HN search is a bit delayed)\u003C/p\u003E",
+      "points": 3,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": []
+    },
+    {
+      "id": 3743154,
+      "created_at": "2012-03-23T01:38:50.000Z",
+      "created_at_i": 1332466730,
+      "type": "comment",
+      "author": "guynamedloren",
+      "text": "\u003Cp\u003EA clever, temporary solution to this would be to change the link to downvote the article and watch it trickle back to zero.  Do it, pg!\u003C/p\u003E",
+      "points": 3,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": [
+        {
+          "id": 3743196,
+          "created_at": "2012-03-23T01:48:36.000Z",
+          "created_at_i": 1332467316,
+          "type": "comment",
+          "author": "ma2rten",
+          "text": "\u003Cp\u003EGenius plan, except that there is no downvote for submissions ...\u003C/p\u003E",
+          "points": 4,
+          "parent_id": 3743154,
+          "story_id": 3742902,
+          "children": [
+            {
+              "id": 3743238,
+              "created_at": "2012-03-23T02:04:48.000Z",
+              "created_at_i": 1332468288,
+              "type": "comment",
+              "author": "MichaelApproved",
+              "text": "\u003Cp\u003EI thought tere was a downvote for users with a high enough level of points.\u003C/p\u003E",
+              "points": 1,
+              "parent_id": 3743196,
+              "story_id": 3742902,
+              "children": [
+                {
+                  "id": 3743243,
+                  "created_at": "2012-03-23T02:06:23.000Z",
+                  "created_at_i": 1332468383,
+                  "type": "comment",
+                  "author": "guynamedloren",
+                  "text": "\u003Cp\u003EAppears as though this may exist for comments only - not submissions.  Though I wonder if a link would work just the same?\u003C/p\u003E",
+                  "points": 1,
+                  "parent_id": 3743238,
+                  "story_id": 3742902,
+                  "children": []
+                },
+                {
+                  "id": 3743248,
+                  "created_at": "2012-03-23T02:07:54.000Z",
+                  "created_at_i": 1332468474,
+                  "type": "comment",
+                  "author": "lotharbot",
+                  "text": "\u003Cp\u003EOnly for comments.  Submissions can be flagged, but not downvoted.\u003C/p\u003E",
+                  "points": 1,
+                  "parent_id": 3743238,
+                  "story_id": 3742902,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3742938,
+      "created_at": "2012-03-23T00:48:18.000Z",
+      "created_at_i": 1332463698,
+      "type": "comment",
+      "author": "patrickod",
+      "text": "\u003Cp\u003EInteresting. It's almost like a view counter for the article\u003C/p\u003E",
+      "points": 3,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": [
+        {
+          "id": 3742943,
+          "created_at": "2012-03-23T00:49:24.000Z",
+          "created_at_i": 1332463764,
+          "type": "comment",
+          "author": "Vaanir",
+          "text": "\u003Cp\u003EYep, it was 130 as I read this comment. Going over 140 now. Click click click..\u003C/p\u003E",
+          "points": 1,
+          "parent_id": 3742938,
+          "story_id": 3742902,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": 3742985,
+      "created_at": "2012-03-23T00:59:54.000Z",
+      "created_at_i": 1332464394,
+      "type": "comment",
+      "author": "sams99",
+      "text": "\u003Cp\u003Eso, we have 3 of these now ... on the front page ... I guess this is a side effect of the community not having anywhere to submit bugs to\u003C/p\u003E",
+      "points": 2,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": []
+    },
+    {
+      "id": 3743146,
+      "created_at": "2012-03-23T01:37:33.000Z",
+      "created_at_i": 1332466653,
+      "type": "comment",
+      "author": "benatkin",
+      "text": "\u003Cp\u003EI took care to click \u003Ci\u003Ecomments\u003C/i\u003E.\u003C/p\u003E",
+      "points": 2,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": []
+    },
+    {
+      "id": 3742958,
+      "created_at": "2012-03-23T00:52:51.000Z",
+      "created_at_i": 1332463971,
+      "type": "comment",
+      "author": "donw",
+      "text": "\u003Cp\u003EBonus points for pointing out the bug, and not using it as a way to blast some rubbish marketing to the front page.\u003C/p\u003E",
+      "points": 2,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": [
+        {
+          "id": 3742992,
+          "created_at": "2012-03-23T01:02:09.000Z",
+          "created_at_i": 1332464529,
+          "type": "comment",
+          "author": "bigiain",
+          "text": "\u003Cp\u003EI can't help but wonder if someone discovered this before, and realised they'd need to put some sort of throttling in place to keep it under the radar\u003C/p\u003E\u003Cp\u003E(Maybe _that_ explains why so many TechCrunch articles make the front page?)\u003C/p\u003E",
+          "points": 3,
+          "parent_id": 3742958,
+          "story_id": 3742902,
+          "children": [
+            {
+              "id": 3743041,
+              "created_at": "2012-03-23T01:12:08.000Z",
+              "created_at_i": 1332465128,
+              "type": "comment",
+              "author": "avree",
+              "text": "\u003Cp\u003EYou can see what it's doing in the URL. You don't see that in other submission URLs.\u003C/p\u003E",
+              "points": 1,
+              "parent_id": 3742992,
+              "story_id": 3742902,
+              "children": [
+                {
+                  "id": 3743270,
+                  "created_at": "2012-03-23T02:16:42.000Z",
+                  "created_at_i": 1332469002,
+                  "type": "comment",
+                  "author": "unimpressive",
+                  "text": "\u003Cp\u003EYou could send it to a link which is hooked to a script that swaps the links for one in ten views or what have you. The extra benefit of that approach is that you don't have to worry about getting the submission ID right when submitting. You can just edit it on your server retroactively.\u003C/p\u003E\u003Cp\u003ENot that I'd ever be crazy enough try this for real of course.\u003C/p\u003E\u003Cp\u003EEDIT: According to posts I've read the votes aren't valid if the referrer isn't Hacker News. So the only thing possible is what's on display.\u003C/p\u003E",
+                  "points": 2,
+                  "parent_id": 3743041,
+                  "story_id": 3742902,
+                  "children": []
+                },
+                {
+                  "id": 3743295,
+                  "created_at": "2012-03-23T02:25:33.000Z",
+                  "created_at_i": 1332469533,
+                  "type": "comment",
+                  "author": "graylights",
+                  "text": "\u003Cp\u003EYou can see it in the url here because he wasn't trying to hide it.  He could have linked to a blog post containing a hidden element that does the get (after checking if the referer is HN).\u003C/p\u003E",
+                  "points": 1,
+                  "parent_id": 3743041,
+                  "story_id": 3742902,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3743244,
+      "created_at": "2012-03-23T02:06:56.000Z",
+      "created_at_i": 1332468416,
+      "type": "comment",
+      "author": "Garthex",
+      "text": "\u003Cp\u003EI'm curious as to whether this post will ever leave the front page. If it keeps getting points at an alarming rate, is there anything in the algorithm to eventually lower the ranking?\u003C/p\u003E",
+      "points": 1,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": [
+        {
+          "id": 3743288,
+          "created_at": "2012-03-23T02:23:50.000Z",
+          "created_at_i": 1332469430,
+          "type": "comment",
+          "author": "dbh937",
+          "text": "\u003Cp\u003EModerators might take it off.\u003C/p\u003E",
+          "points": 1,
+          "parent_id": 3743244,
+          "story_id": 3742902,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": 3743286,
+      "created_at": "2012-03-23T02:22:24.000Z",
+      "created_at_i": 1332469344,
+      "type": "comment",
+      "author": "dbh937",
+      "text": "\u003Cp\u003EThis is staying as #1 for a while.\u003C/p\u003E",
+      "points": 1,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": []
+    },
+    {
+      "id": 3743308,
+      "created_at": "2012-03-23T02:30:04.000Z",
+      "created_at_i": 1332469804,
+      "type": "comment",
+      "author": "MichaelApproved",
+      "text": "\u003Cp\u003ELooks like it was removed from the front page by someone. Fun while it lasted...\u003C/p\u003E",
+      "points": 1,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": []
+    },
+    {
+      "id": 3743096,
+      "created_at": "2012-03-23T01:26:04.000Z",
+      "created_at_i": 1332465964,
+      "type": "comment",
+      "author": "liamk",
+      "text": "\u003Cp\u003EThis could become the most voted up submission of all time.\u003C/p\u003E",
+      "points": 1,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": []
+    },
+    {
+      "id": 3743103,
+      "created_at": "2012-03-23T01:27:17.000Z",
+      "created_at_i": 1332466037,
+      "type": "comment",
+      "author": "AndyKelley",
+      "text": "\u003Cp\u003EI would have fixed my vote at least, but:\u003C/p\u003E\u003Cp\u003E\u003Ca href=\"http://news.ycombinator.com/vote?for=3742902\u0026#38;dir=down\u0026#38;whence=newest\" rel=\"nofollow\"\u003Ehttp://news.ycombinator.com/vote?for=3742902\u0026#38;dir=down\u0026#3...\u003C/a\u003E\u003C/p\u003E\u003Cp\u003E\"Can't make that vote.\"\u003C/p\u003E",
+      "points": 1,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": []
+    },
+    {
+      "id": 3743170,
+      "created_at": "2012-03-23T01:42:57.000Z",
+      "created_at_i": 1332466977,
+      "type": "comment",
+      "author": "kaybe",
+      "text": "\u003Cp\u003EA slightly unrelated question: What's up with those non-votable non-commentable recruiting links that have been up on the front page recently? Was that another bug exploit?\u003C/p\u003E",
+      "points": 1,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": [
+        {
+          "id": 3743176,
+          "created_at": "2012-03-23T01:44:57.000Z",
+          "created_at_i": 1332467097,
+          "type": "comment",
+          "author": "chucknthem",
+          "text": "\u003Cp\u003EThose links are usually recruiting links for YC companies allowed by PG.\u003C/p\u003E",
+          "points": 2,
+          "parent_id": 3743170,
+          "story_id": 3742902,
+          "children": []
+        },
+        {
+          "id": 3743194,
+          "created_at": "2012-03-23T01:48:20.000Z",
+          "created_at_i": 1332467300,
+          "type": "comment",
+          "author": "zt",
+          "text": "\u003Cp\u003EYC funded companies can post such links. Most of them are also found at \u003Ca href=\"http://news.ycombinator.com/jobs\" rel=\"nofollow\"\u003Ehttp://news.ycombinator.com/jobs\u003C/a\u003E.\u003C/p\u003E",
+          "points": 2,
+          "parent_id": 3743170,
+          "story_id": 3742902,
+          "children": []
+        },
+        {
+          "id": 3743192,
+          "created_at": "2012-03-23T01:48:12.000Z",
+          "created_at_i": 1332467292,
+          "type": "comment",
+          "author": "bostonvaulter2",
+          "text": "\u003Cp\u003EThose are ads for Y-Combinator companies\u003C/p\u003E",
+          "points": 1,
+          "parent_id": 3743170,
+          "story_id": 3742902,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": 3742950,
+      "created_at": "2012-03-23T00:50:12.000Z",
+      "created_at_i": 1332463812,
+      "type": "comment",
+      "author": "Nattefrost",
+      "text": "\u003Cp\u003Elawl, nice one. :)\u003C/p\u003E",
+      "points": 1,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": []
+    },
+    {
+      "id": 3743208,
+      "created_at": "2012-03-23T01:51:52.000Z",
+      "created_at_i": 1332467512,
+      "type": "comment",
+      "author": "zt",
+      "text": "\u003Cp\u003EWhen I saw the first one of these, I thought to myself that the front-page wouldn't be overwhelmed by these posts. The whole reason most of us are here is that it is a mature community. As the first post was enough to prove the point, why did OP post it again? (S)He apologize and give credit to \"\u003Ca href=\"http://news.ycombinator.com/item?id=3742742\" rel=\"nofollow\"\u003Ehttp://news.ycombinator.com/item?id=3742742\u003C/a\u003E (GreekOphion) for finding the bug\", but why make the post at all? What good does it do? \"I would send you the karma if I could!\" just seems disingenuous.\u003C/p\u003E",
+      "points": 1,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": [
+        {
+          "id": 3743263,
+          "created_at": "2012-03-23T02:14:54.000Z",
+          "created_at_i": 1332468894,
+          "type": "comment",
+          "author": "cs702",
+          "text": "\u003Cp\u003Ezt: maturity has nothing to do with this.  Hackers appreciate clever hacks, \u003Ci\u003Eespecially\u003C/i\u003E those that are self-referential.  That's all there is to it.\u003C/p\u003E",
+          "points": 4,
+          "parent_id": 3743208,
+          "story_id": 3742902,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": 3742964,
+      "created_at": "2012-03-23T00:53:56.000Z",
+      "created_at_i": 1332464036,
+      "type": "comment",
+      "author": "Finbarr",
+      "text": "\u003Cp\u003EI wonder if this has been manipulated in the past.\u003C/p\u003E",
+      "points": 1,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": [
+        {
+          "id": 3742990,
+          "created_at": "2012-03-23T01:01:31.000Z",
+          "created_at_i": 1332464491,
+          "type": "comment",
+          "author": "JeremyBanks",
+          "text": "\u003Cp\u003EI think I remember seeing a post just like this a couple of years ago, after which the bug was fixed. I wonder if there was a regression or if this is somehow different.\u003C/p\u003E",
+          "points": 1,
+          "parent_id": 3742964,
+          "story_id": 3742902,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": 3742946,
+      "created_at": "2012-03-23T00:49:32.000Z",
+      "created_at_i": 1332463772,
+      "type": "comment",
+      "author": "johndoeee",
+      "text": "\u003Cp\u003EYou can also secretly iframe it, always wondered if someone did it.\u003C/p\u003E\u003Cp\u003EAlso a good example of why you need to use POST for stuff like this :)\u003C/p\u003E",
+      "points": 0,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": []
+    },
+    {
+      "id": 3743049,
+      "created_at": "2012-03-23T01:13:34.000Z",
+      "created_at_i": 1332465214,
+      "type": "comment",
+      "author": "sethbannon",
+      "text": "\u003Cp\u003EBrilliant.\u003C/p\u003E",
+      "points": -1,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": []
+    },
+    {
+      "id": 3742967,
+      "created_at": "2012-03-23T00:54:55.000Z",
+      "created_at_i": 1332464095,
+      "type": "comment",
+      "author": "reason",
+      "text": "\u003Cp\u003EYou are ruining the sanctity of karma.\u003C/p\u003E\u003Cp\u003EEdit: Lotsa serious folks on tonight.\u003C/p\u003E",
+      "points": -3,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": []
+    },
+    {
+      "id": 3742935,
+      "created_at": "2012-03-23T00:47:51.000Z",
+      "created_at_i": 1332463671,
+      "type": "comment",
+      "author": "robertelder",
+      "text": "\u003Cp\u003Elawl\u003C/p\u003E",
+      "points": -4,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": []
+    },
+    {
+      "id": 3742951,
+      "created_at": "2012-03-23T00:50:17.000Z",
+      "created_at_i": 1332463817,
+      "type": "comment",
+      "author": "minikomi",
+      "text": "\u003Cp\u003EI wouldn't usually do this but.. \u003Ci\u003Eso brave\u003C/i\u003E\u003C/p\u003E",
+      "points": -4,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": []
+    },
+    {
+      "id": 3742942,
+      "created_at": "2012-03-23T00:49:05.000Z",
+      "created_at_i": 1332463745,
+      "type": "comment",
+      "author": "naz",
+      "text": "\u003Cp\u003EThis is why you shouldn't allow GET for performing actions. An image tag in an article could do the same thing (e: if it didn't check the referrer).\u003C/p\u003E",
+      "points": null,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": [
+        {
+          "id": 3742987,
+          "created_at": "2012-03-23T01:00:07.000Z",
+          "created_at_i": 1332464407,
+          "type": "comment",
+          "author": "kijin",
+          "text": "\u003Cp\u003EIt's trivially easy to forge POST requests, too.\u003C/p\u003E\u003Cp\u003EWhat's really needed is a token (nonce) that is tied to the session. That's like CSRF Prevention 101.\u003C/p\u003E",
+          "points": 12,
+          "parent_id": 3742942,
+          "story_id": 3742902,
+          "children": [
+            {
+              "id": 3743172,
+              "created_at": "2012-03-23T01:43:17.000Z",
+              "created_at_i": 1332466997,
+              "type": "comment",
+              "author": "rabidsnail",
+              "text": "\u003Cp\u003EOr xhr with custom header, if you don't want to have to keep track of state.\u003C/p\u003E",
+              "points": 1,
+              "parent_id": 3742987,
+              "story_id": 3742902,
+              "children": [
+                {
+                  "id": 3743402,
+                  "created_at": "2012-03-23T02:53:35.000Z",
+                  "created_at_i": 1332471215,
+                  "type": "comment",
+                  "author": "kijin",
+                  "text": "\u003Cp\u003ESo that anyone who has JavaScript disabled will be treated like an attacker? No thanks, HN is one of very few sites nowadays that work fine without JavaScript tricks, and I'd much rather PG kept it that way.\u003C/p\u003E",
+                  "points": 2,
+                  "parent_id": 3743172,
+                  "story_id": 3742902,
+                  "children": []
+                },
+                {
+                  "id": 3743230,
+                  "created_at": "2012-03-23T02:00:06.000Z",
+                  "created_at_i": 1332468006,
+                  "type": "comment",
+                  "author": "simonster",
+                  "text": "\u003Cp\u003EA custom header is not sufficient (blame Flash): \u003Ca href=\"http://lists.webappsec.org/pipermail/websecurity_lists.webappsec.org/2011-February/007533.html\" rel=\"nofollow\"\u003Ehttp://lists.webappsec.org/pipermail/websecurity_lists.webap...\u003C/a\u003E\u003C/p\u003E",
+                  "points": 2,
+                  "parent_id": 3743172,
+                  "story_id": 3742902,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": 3743942,
+              "created_at": "2012-03-23T06:21:14.000Z",
+              "created_at_i": 1332483674,
+              "type": "comment",
+              "author": "Udo",
+              "text": "\u003Cp\u003EIn this specific case merely forging a POST request externally does nothing as the user has to be signed in for this to work. Thus, restricting actions such as voting to POST (and restricting to same-origin) \u003Ci\u003Edoes\u003C/i\u003E constitute adequate protection if there is no XSS vulnerability on the site.\u003C/p\u003E",
+              "points": 1,
+              "parent_id": 3742987,
+              "story_id": 3742902,
+              "children": [
+                {
+                  "id": 3744206,
+                  "created_at": "2012-03-23T08:44:27.000Z",
+                  "created_at_i": 1332492267,
+                  "type": "comment",
+                  "author": "simonw",
+                  "text": "\u003Cp\u003EBut if the user IS signed in (and if someone arrives at your site from a link on Hacker News there's a very good chance they will be signed in) a POST forged from your site can affect their session. Read up on CSRF - it's a very different vulnerability from XSS (though having an XSS vulnerability will make any CSRF protection you have in place null and void).\u003C/p\u003E\u003Cp\u003E\u003Ca href=\"http://en.wikipedia.org/wiki/CSRF\" rel=\"nofollow\"\u003Ehttp://en.wikipedia.org/wiki/CSRF\u003C/a\u003E\u003C/p\u003E",
+                  "points": 2,
+                  "parent_id": 3743942,
+                  "story_id": 3742902,
+                  "children": [
+                    {
+                      "id": 3744339,
+                      "created_at": "2012-03-23T09:54:49.000Z",
+                      "created_at_i": 1332496489,
+                      "type": "comment",
+                      "author": "Udo",
+                      "text": "\u003Cp\u003EDon't be so condescending, you didn't read my entire post. To quote myself:\u003C/p\u003E\u003Cp\u003E\u003Cpre\u003E\u003Ccode\u003E  \u0026#62; POST (and restricting to same-origin)\n\u003C/code\u003E\u003C/pre\u003E\nI still don't think it's possible to forge the referer header on an uncompromised browser.\u003C/p\u003E",
+                      "points": 2,
+                      "parent_id": 3744206,
+                      "story_id": 3742902,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": 3747325,
+                  "created_at": "2012-03-23T21:12:03.000Z",
+                  "created_at_i": 1332537123,
+                  "type": "comment",
+                  "author": "sp332",
+                  "text": "\u003Cp\u003EWould restricting to same-origin break \u003Ca href=\"http://hackerne.ws\" rel=\"nofollow\"\u003Ehttp://hackerne.ws\u003C/a\u003E?\u003C/p\u003E",
+                  "points": 1,
+                  "parent_id": 3743942,
+                  "story_id": 3742902,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3743050,
+          "created_at": "2012-03-23T01:13:52.000Z",
+          "created_at_i": 1332465232,
+          "type": "comment",
+          "author": "psychotik",
+          "text": "\u003Cp\u003EPOST with CSRF protection is the answer: \u003Ca href=\"http://crazyviraj.blogspot.com/2009/10/xsrfcsrf-attacks-in-non-geek-speak.html\" rel=\"nofollow\"\u003Ehttp://crazyviraj.blogspot.com/2009/10/xsrfcsrf-attacks-in-n...\u003C/a\u003E\u003C/p\u003E",
+          "points": 11,
+          "parent_id": 3742942,
+          "story_id": 3742902,
+          "children": []
+        },
+        {
+          "id": 3742955,
+          "created_at": "2012-03-23T00:51:30.000Z",
+          "created_at_i": 1332463890,
+          "type": "comment",
+          "author": "olalonde",
+          "text": "\u003Cp\u003ESomeone in the other thread pointed out it at least checked the referrer header.\u003C/p\u003E",
+          "points": 3,
+          "parent_id": 3742942,
+          "story_id": 3742902,
+          "children": [
+            {
+              "id": 3742983,
+              "created_at": "2012-03-23T00:59:17.000Z",
+              "created_at_i": 1332464357,
+              "type": "comment",
+              "author": "simonw",
+              "text": "\u003Cp\u003EThat's not a good enough solution - there are decent reasons that a referrer header might be missing (some PC antivirus software strips out referrer headers for example). The only safe way to handle this is with a POST request protected by a CSRF token tied to a cookie.\u003C/p\u003E",
+              "points": 5,
+              "parent_id": 3742955,
+              "story_id": 3742902,
+              "children": [
+                {
+                  "id": 3743090,
+                  "created_at": "2012-03-23T01:22:57.000Z",
+                  "created_at_i": 1332465777,
+                  "type": "comment",
+                  "author": "hashbo",
+                  "text": "\u003Cp\u003E+1 You cant trust the Referer header.\u003C/p\u003E",
+                  "points": 1,
+                  "parent_id": 3742983,
+                  "story_id": 3742902,
+                  "children": []
+                },
+                {
+                  "id": 3743222,
+                  "created_at": "2012-03-23T01:56:48.000Z",
+                  "created_at_i": 1332467808,
+                  "type": "comment",
+                  "author": "jpablo",
+                  "text": "\u003Cp\u003EGET with randomized ids and checking referrer should be good enough to keeps things simple.\u003C/p\u003E",
+                  "points": 1,
+                  "parent_id": 3742983,
+                  "story_id": 3742902,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": 3743100,
+              "created_at": "2012-03-23T01:27:01.000Z",
+              "created_at_i": 1332466021,
+              "type": "comment",
+              "author": "ben0x539",
+              "text": "\u003Cp\u003EReally? I block the referer header so I guess all my upvotes haven't been counted. :(\u003C/p\u003E",
+              "points": 5,
+              "parent_id": 3742955,
+              "story_id": 3742902,
+              "children": []
+            },
+            {
+              "id": 3743253,
+              "created_at": "2012-03-23T02:08:58.000Z",
+              "created_at_i": 1332468538,
+              "type": "comment",
+              "author": "danielrm26",
+              "text": "\u003Cp\u003EThe referer header is also controlled by the client. Anything controlled by the client should be considered tainted.\u003C/p\u003E",
+              "points": 1,
+              "parent_id": 3742955,
+              "story_id": 3742902,
+              "children": [
+                {
+                  "id": 3743299,
+                  "created_at": "2012-03-23T02:26:41.000Z",
+                  "created_at_i": 1332469601,
+                  "type": "comment",
+                  "author": "jbri",
+                  "text": "\u003Cp\u003EThis doesn't really apply when you are trying to verify whether the client actually performed some action.\u003C/p\u003E\u003Cp\u003EIn a CSRF scenario, the client itself can presumably be \"trusted\" - A client behaving maliciously can only hurt itself, not any one else. The \u003Ci\u003Eimportant\u003C/i\u003E thing is to not trust anything that may have been provided by a third party.\u003C/p\u003E",
+                  "points": 1,
+                  "parent_id": 3743253,
+                  "story_id": 3742902,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

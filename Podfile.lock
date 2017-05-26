@@ -1,19 +1,25 @@
 PODS:
+  - Marshal (1.2.4)
+  - ModelMapper (6.0.0)
   - Nimble (7.0.0)
   - RxCocoa (3.4.1):
     - RxSwift (~> 3.4)
   - RxSwift (3.4.1)
 
 DEPENDENCIES:
+  - Marshal
+  - ModelMapper
   - Nimble
   - RxCocoa
   - RxSwift
 
 SPEC CHECKSUMS:
+  Marshal: 8e04e6624e506921db7143b0bfd83caee03f32d6
+  ModelMapper: 3596a82f26c43491f6a8d3a00bcdba6ba0e62a93
   Nimble: 874982b605d4d752fcac6be695d13c502de84b1b
   RxCocoa: a8a5f1d061d0043e28f56976829f31ce63e8eb09
   RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
 
-PODFILE CHECKSUM: dba3558a9e2d8632e6b4bbe9a8b3bfab4146600f
+PODFILE CHECKSUM: ee5966a267d7389ab61e37c1df5b20d2f80cda24
 
 COCOAPODS: 1.2.1

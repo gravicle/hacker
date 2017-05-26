@@ -9,6 +9,11 @@ def rxPods
   pod 'RxCocoa'
 end
 
+def networkingPods
+  pod "ModelMapper"
+  pod 'Marshal'
+end
+
 target 'Hacker' do
   use_frameworks!
   inhibit_all_warnings!
@@ -24,5 +29,15 @@ target 'Hacker' do
     inherit! :search_paths
     testingPods
   end
+
+  target 'Models' do
+    networkingPods
+
+    target 'ModelsTests' do
+      inherit! :search_paths
+      testingPods
+    end
+  end
+  
 
 end
