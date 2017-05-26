@@ -71,7 +71,7 @@ final fileprivate class ObservableOptionalScheduled<E> : Producer<E> {
         _scheduler = scheduler
     }
 
-    override func run<O: ObserverType>(_ observer: O, cancel: Cancelable) -> (sink: Disposable, subscription: Disposable) where O.E == E {
+    override func run<O : ObserverType>(_ observer: O, cancel: Cancelable) -> (sink: Disposable, subscription: Disposable) where O.E == E {
         let sink = ObservableOptionalScheduledSink(parent: self, observer: observer, cancel: cancel)
         let subscription = sink.run()
         return (sink: sink, subscription: subscription)
@@ -80,12 +80,12 @@ final fileprivate class ObservableOptionalScheduled<E> : Producer<E> {
 
 final fileprivate class ObservableOptional<E>: Producer<E> {
     private let _optional: E?
-
+    
     init(optional: E?) {
         _optional = optional
     }
-
-    override func subscribe<O: ObserverType>(_ observer: O) -> Disposable where O.E == E {
+    
+    override func subscribe<O : ObserverType>(_ observer: O) -> Disposable where O.E == E {
         if let element = _optional {
             observer.on(.next(element))
         }

@@ -22,7 +22,8 @@ extension ObservableType {
         -> Observable<E> {
             if bufferSize == 1 {
                 return ShareReplay1(source: self.asObservable())
-            } else {
+            }
+            else {
                 return self.replay(bufferSize).refCount()
             }
     }
@@ -30,7 +31,9 @@ extension ObservableType {
 
 // optimized version of share replay for most common case
 final fileprivate class ShareReplay1<Element>
-    : Observable<Element>, ObserverType, SynchronizedUnsubscribeType {
+    : Observable<Element>
+    , ObserverType
+    , SynchronizedUnsubscribeType {
 
     typealias Observers = AnyObserver<Element>.s
     typealias DisposeKey = Observers.KeyType
@@ -49,14 +52,14 @@ final fileprivate class ShareReplay1<Element>
         self._source = source
     }
 
-    override func subscribe<O: ObserverType>(_ observer: O) -> Disposable where O.E == E {
+    override func subscribe<O : ObserverType>(_ observer: O) -> Disposable where O.E == E {
         _lock.lock()
         let result = _synchronized_subscribe(observer)
         _lock.unlock()
         return result
     }
 
-    func _synchronized_subscribe<O: ObserverType>(_ observer: O) -> Disposable where O.E == E {
+    func _synchronized_subscribe<O : ObserverType>(_ observer: O) -> Disposable where O.E == E {
         if let element = self._element {
             observer.on(.next(element))
         }
@@ -117,8 +120,8 @@ final fileprivate class ShareReplay1<Element>
             _connection?.dispose()
             _connection = nil
         }
-
+        
         return _observers
     }
-
+    
 }

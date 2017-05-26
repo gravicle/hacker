@@ -24,7 +24,7 @@ import RxSwift
         }
 
     }
-
+    
     extension Reactive where Base: UIWebView {
 
         /// Reactive wrapper for `delegate`.
@@ -46,7 +46,7 @@ import RxSwift
                 .methodInvoked(#selector(UIWebViewDelegate.webViewDidFinishLoad(_:)))
                 .map {_ in}
         }
-
+        
         /// Reactive wrapper for `delegate` message.
         public var didFailLoad: Observable<Error> {
             return delegate

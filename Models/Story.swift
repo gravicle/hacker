@@ -2,6 +2,7 @@ import CoreData
 import Mapper
 import Foundation
 
+@objc
 public final class Story: Item {
 
     public required init(map: Mapper, context: NSManagedObjectContext) throws {
@@ -9,7 +10,7 @@ public final class Story: Item {
         link = try? map.from("url")
         text = try? map.from("text")
         title = try? map.from("title")
-        comments = (try? map.from("children", in: context) as [Comment]).flatMap(NSOrderedSet.init)
+        (try? map.from("children", in: context) as [Comment])?.forEach(addToChildren)
     }
 
 }

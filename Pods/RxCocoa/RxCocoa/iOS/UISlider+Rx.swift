@@ -14,7 +14,7 @@ import RxSwift
 import UIKit
 
 extension Reactive where Base: UISlider {
-
+    
     /// Reactive wrapper for `value` property.
     public var value: ControlProperty<Float> {
         return UIControl.rx.value(
@@ -26,7 +26,7 @@ extension Reactive where Base: UISlider {
             }
         )
     }
-
+    
 }
 
 #endif

@@ -14,7 +14,7 @@ import RxSwift
 import UIKit
 
 extension Reactive where Base: UILabel {
-
+    
     /// Bindable sink for `text` property.
     public var text: UIBindingObserver<Base, String?> {
         return UIBindingObserver(UIElement: self.base) { label, text in
@@ -28,7 +28,7 @@ extension Reactive where Base: UILabel {
             label.attributedText = text
         }
     }
-
+    
 }
 
 #endif

@@ -27,8 +27,9 @@ class StoryTests: XCTestCase {
     }
 
     func testCreatingStoryInStore() {
-        let story = try? Story(map: .init(file: ), context: context)
+        let story = try? Story(map: .init(file: R.file.storyJson()!), context: context)
         expect(story).toNot(beNil())
+        expect(try self.context.save()).toNot(throwError())
     }
 
 }

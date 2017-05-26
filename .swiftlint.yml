@@ -1,0 +1,6 @@
+excluded:
+  - Pods
+  - Helix/Constants/R.generated.swift
+
+disabled_rules: # rule identifiers to exclude from running
+  - line_length # this is not 1990! I can have long lines when it makes sense.

@@ -6,6 +6,7 @@
 //  Copyright © 2015 Krunoslav Zaher. All rights reserved.
 //
 
+
 extension ObservableType {
 
     /**
@@ -25,16 +26,16 @@ extension ObservableType {
 
 final fileprivate class ToArraySink<SourceType, O: ObserverType> : Sink<O>, ObserverType where O.E == [SourceType] {
     typealias Parent = ToArray<SourceType>
-
+    
     let _parent: Parent
     var _list = Array<SourceType>()
-
+    
     init(parent: Parent, observer: O, cancel: Cancelable) {
         _parent = parent
-
+        
         super.init(observer: observer, cancel: cancel)
     }
-
+    
     func on(_ event: Event<SourceType>) {
         switch event {
         case .next(let value):
@@ -56,7 +57,7 @@ final fileprivate class ToArray<SourceType> : Producer<[SourceType]> {
     init(source: Observable<SourceType>) {
         _source = source
     }
-
+    
     override func run<O: ObserverType>(_ observer: O, cancel: Cancelable) -> (sink: Disposable, subscription: Disposable) where O.E == [SourceType] {
         let sink = ToArraySink(parent: self, observer: observer, cancel: cancel)
         let subscription = _source.subscribe(sink)

@@ -14,8 +14,10 @@ import RxSwift
 #endif
 
 // objc monkey business
-class _RxCollectionViewReactiveArrayDataSource: NSObject, UICollectionViewDataSource {
-
+class _RxCollectionViewReactiveArrayDataSource
+    : NSObject
+    , UICollectionViewDataSource {
+    
     @objc(numberOfSectionsInCollectionView:)
     func numberOfSections(in: UICollectionView) -> Int {
         return 1
@@ -24,7 +26,7 @@ class _RxCollectionViewReactiveArrayDataSource: NSObject, UICollectionViewDataSo
     func _collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 0
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return _collectionView(collectionView, numberOfItemsInSection: section)
     }
@@ -39,13 +41,14 @@ class _RxCollectionViewReactiveArrayDataSource: NSObject, UICollectionViewDataSo
 }
 
 class RxCollectionViewReactiveArrayDataSourceSequenceWrapper<S: Sequence>
-    : RxCollectionViewReactiveArrayDataSource<S.Iterator.Element>, RxCollectionViewDataSourceType {
+    : RxCollectionViewReactiveArrayDataSource<S.Iterator.Element>
+    , RxCollectionViewDataSourceType {
     typealias Element = S
 
     override init(cellFactory: @escaping CellFactory) {
         super.init(cellFactory: cellFactory)
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, observedEvent: Event<S>) {
         UIBindingObserver(UIElement: self) { collectionViewDataSource, sectionModels in
             let sections = Array(sectionModels)
@@ -54,14 +57,16 @@ class RxCollectionViewReactiveArrayDataSourceSequenceWrapper<S: Sequence>
     }
 }
 
+
 // Please take a look at `DelegateProxyType.swift`
 class RxCollectionViewReactiveArrayDataSource<Element>
-    : _RxCollectionViewReactiveArrayDataSource, SectionedViewDataSourceType {
-
+    : _RxCollectionViewReactiveArrayDataSource
+    , SectionedViewDataSourceType {
+    
     typealias CellFactory = (UICollectionView, Int, Element) -> UICollectionViewCell
-
-    var itemModels: [Element]?
-
+    
+    var itemModels: [Element]? = nil
+    
     func modelAtIndex(_ index: Int) -> Element? {
         return itemModels?[index]
     }
@@ -73,28 +78,28 @@ class RxCollectionViewReactiveArrayDataSource<Element>
         }
         return item
     }
-
+    
     var cellFactory: CellFactory
-
+    
     init(cellFactory: @escaping CellFactory) {
         self.cellFactory = cellFactory
     }
-
+    
     // data source
-
+    
     override func _collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return itemModels?.count ?? 0
     }
-
+    
     override func _collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return cellFactory(collectionView, indexPath.item, itemModels![indexPath.item])
     }
-
+    
     // reactive
-
+    
     func collectionView(_ collectionView: UICollectionView, observedElements: [Element]) {
         self.itemModels = observedElements
-
+        
         collectionView.reloadData()
 
         // workaround for http://stackoverflow.com/questions/39867325/ios-10-bug-uicollectionview-received-layout-attributes-for-a-cell-with-an-index

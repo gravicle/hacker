@@ -26,10 +26,10 @@ extension Reactive where Base: NSLayoutConstraint {
             constraint.constant = constant
         }
     }
-
+    
     /// Bindable sink for `active` property.
     @available(iOS 8, OSX 10.10, *)
-    public var active: UIBindingObserver<Base, Bool> {
+    public var active:  UIBindingObserver<Base, Bool> {
         return UIBindingObserver(UIElement: self.base) { constraint, value in
             constraint.isActive = value
         }

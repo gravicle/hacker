@@ -18,6 +18,7 @@ public extension Bundle {
     fatalError()
   }
 
+
   @available(*, unavailable, renamed: "path(forResource:)")
   public func pathForResource(_ resource: FileResourceType) -> String? {
     fatalError()

@@ -13,11 +13,11 @@
 public final class Variable<Element> {
 
     public typealias E = Element
-
+    
     private let _subject: BehaviorSubject<Element>
-
+    
     private var _lock = SpinLock()
-
+ 
     // state
     private var _value: E
 
@@ -52,7 +52,7 @@ public final class Variable<Element> {
             _subject.on(.next(newValue))
         }
     }
-
+    
     /// Initializes variable with initial value.
     ///
     /// - parameter value: Initial variable value.
@@ -60,7 +60,7 @@ public final class Variable<Element> {
         _value = value
         _subject = BehaviorSubject(value: value)
     }
-
+    
     /// - returns: Canonical interface for push style sequence
     public func asObservable() -> Observable<E> {
         return _subject

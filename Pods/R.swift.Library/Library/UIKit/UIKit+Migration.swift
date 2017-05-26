@@ -19,6 +19,7 @@ public extension NibResourceType {
   }
 }
 
+
 public extension StoryboardResourceWithInitialControllerType {
 
   @available(*, unavailable, renamed: "instantiateInitialViewController")
@@ -31,56 +32,73 @@ public extension UICollectionView {
 
   @available(*, unavailable, renamed: "dequeueReusableCell(withReuseIdentifier:for:)")
   public func dequeueReusableCellWithReuseIdentifier<Identifier: ReuseIdentifierType>(_ identifier: Identifier, forIndexPath indexPath: IndexPath) -> Identifier.ReusableType?
-    where Identifier.ReusableType: UICollectionReusableView {
+    where Identifier.ReusableType: UICollectionReusableView
+  {
     fatalError()
   }
+
 
   @available(*, unavailable, renamed: "dequeueReusableSupplementaryView(ofKind:withReuseIdentifier:for:)")
   public func dequeueReusableSupplementaryViewOfKind<Identifier: ReuseIdentifierType>(_ elementKind: String, withReuseIdentifier identifier: Identifier, forIndexPath indexPath: IndexPath) -> Identifier.ReusableType?
-    where Identifier.ReusableType: UICollectionReusableView {
+    where Identifier.ReusableType: UICollectionReusableView
+  {
     fatalError()
   }
+
 
   @available(*, unavailable, renamed: "register")
   public func registerNib<Resource: NibResourceType>(_ nibResource: Resource)
-    where Resource: ReuseIdentifierType, Resource.ReusableType: UICollectionViewCell {
+    where Resource: ReuseIdentifierType, Resource.ReusableType: UICollectionViewCell
+  {
     fatalError()
   }
 
+
   @available(*, unavailable, renamed: "register")
   public func registerNib<Resource: NibResourceType>(_ nibResource: Resource, forSupplementaryViewOfKind kind: String)
-    where Resource: ReuseIdentifierType, Resource.ReusableType: UICollectionReusableView {
+    where Resource: ReuseIdentifierType, Resource.ReusableType: UICollectionReusableView
+  {
     fatalError()
   }
 }
 
 public extension UITableView {
 
+
   @available(*, unavailable, renamed: "dequeueReusableCell(withIdentifier:for:)")
   public func dequeueReusableCellWithIdentifier<Identifier: ReuseIdentifierType>(_ identifier: Identifier, forIndexPath indexPath: IndexPath) -> Identifier.ReusableType?
-    where Identifier.ReusableType: UITableViewCell {
+    where Identifier.ReusableType: UITableViewCell
+  {
     fatalError()
   }
+
 
   @available(*, unavailable, renamed: "dequeueReusableCell(withIdentifier:)")
   public func dequeueReusableCellWithIdentifier<Identifier: ReuseIdentifierType>(_ identifier: Identifier) -> Identifier.ReusableType?
-    where Identifier.ReusableType: UITableViewCell {
+    where Identifier.ReusableType: UITableViewCell
+  {
     fatalError()
   }
+
 
   @available(*, unavailable, renamed: "dequeueReusableHeaderFooterView(withIdentifier:)")
   public func dequeueReusableHeaderFooterViewWithIdentifier<Identifier: ReuseIdentifierType>(_ identifier: Identifier) -> Identifier.ReusableType?
-    where Identifier.ReusableType: UITableViewHeaderFooterView {
+    where Identifier.ReusableType: UITableViewHeaderFooterView
+  {
     fatalError()
   }
+
 
   @available(*, unavailable, renamed: "register")
-  public func registerNib<Resource: NibResourceType>(_ nibResource: Resource) where Resource: ReuseIdentifierType, Resource.ReusableType: UITableViewCell {
+  public func registerNib<Resource: NibResourceType>(_ nibResource: Resource) where Resource: ReuseIdentifierType, Resource.ReusableType: UITableViewCell
+  {
     fatalError()
   }
 
+
   @available(*, unavailable, renamed: "registerHeaderFooterView")
-  public func registerNibForHeaderFooterView<Resource: NibResourceType>(_ nibResource: Resource) where Resource: ReuseIdentifierType, Resource.ReusableType: UIView {
+  public func registerNibForHeaderFooterView<Resource: NibResourceType>(_ nibResource: Resource) where Resource: ReuseIdentifierType, Resource.ReusableType: UIView
+  {
     fatalError()
   }
 }

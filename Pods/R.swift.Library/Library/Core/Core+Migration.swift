@@ -15,7 +15,8 @@ public extension StoryboardSegueIdentifier {
 
   @available(*, unavailable, renamed: "storyboardSegue(withSource:)")
   public func storyboardSegueWithSource(_ sourceViewController: Source)
-    -> StoryboardSegue<Segue, Source, Destination> {
+    -> StoryboardSegue<Segue, Source, Destination>
+  {
     fatalError()
   }
 }

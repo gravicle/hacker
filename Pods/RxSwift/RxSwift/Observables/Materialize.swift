@@ -18,7 +18,7 @@ extension ObservableType {
 }
 
 fileprivate final class MaterializeSink<Element, O: ObserverType>: Sink<O>, ObserverType where O.E == Event<Element> {
-
+    
     func on(_ event: Event<Element>) {
         forwardOn(.next(event))
         if event.isStopEvent {
@@ -30,7 +30,7 @@ fileprivate final class MaterializeSink<Element, O: ObserverType>: Sink<O>, Obse
 
 final fileprivate class Materialize<Element>: Producer<Event<Element>> {
     private let _source: Observable<Element>
-
+    
     init(source: Observable<Element>) {
         _source = source
     }

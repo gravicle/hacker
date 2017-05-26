@@ -14,7 +14,10 @@
     #endif
 
     /// For more information take a look at `DelegateProxyType`.
-    open class RxNavigationControllerDelegateProxy: DelegateProxy, UINavigationControllerDelegate, DelegateProxyType {
+    open class RxNavigationControllerDelegateProxy
+        : DelegateProxy
+        , UINavigationControllerDelegate
+        , DelegateProxyType {
 
         /// For more information take a look at `DelegateProxyType`.
         public class func currentDelegateFor(_ object: AnyObject) -> AnyObject? {

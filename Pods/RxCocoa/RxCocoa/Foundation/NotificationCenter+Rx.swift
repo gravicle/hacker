@@ -26,7 +26,7 @@ extension Reactive where Base: NotificationCenter {
             let nsObserver = self.base.addObserver(forName: name, object: object, queue: nil) { notification in
                 observer.on(.next(notification))
             }
-
+            
             return Disposables.create {
                 self.base.removeObserver(nsObserver)
             }

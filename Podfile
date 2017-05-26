@@ -71,6 +71,7 @@ end
 
 def enableSwiftLint(project) 
   project.targets.each do |target|
+    puts target
     removeShellScriptPhasesWithName("SwiftLint", target)
     
     swiftLintPhase = project.new(Xcodeproj::Project::Object::PBXShellScriptBuildPhase)

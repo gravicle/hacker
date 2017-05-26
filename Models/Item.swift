@@ -1,6 +1,7 @@
 import CoreData
 import Mapper
 
+@objc
 public class Item: NSManagedObject, JSONDecodable {
 
     public required init(map: Mapper, context: NSManagedObjectContext) throws {
@@ -13,7 +14,7 @@ public class Item: NSManagedObject, JSONDecodable {
 
         id = String(try map.from("id") as Int)
         date = try map.from("created_at_i", transformation: Transform.extractDateFromTimeInterval) as NSDate
-        points = try map.from("points")
+        points = 11 // try map.from("points")
         author = try map.from("author")
     }
 

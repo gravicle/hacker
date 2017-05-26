@@ -6,6 +6,7 @@
 //  Copyright © 2015 Krunoslav Zaher. All rights reserved.
 //
 
+
 extension ObservableType {
 
     /**
@@ -30,7 +31,8 @@ extension ObservableType {
  Represents an observable wrapper that can be connected and disconnected from its underlying observable sequence.
 */
 public class ConnectableObservable<Element>
-    : Observable<Element>, ConnectableObservableType {
+    : Observable<Element>
+    , ConnectableObservableType {
 
     /**
      Connects the observable wrapper to its source. All subscribed observers will receive values from the underlying observable sequence as long as the connection is established.
@@ -48,7 +50,7 @@ final class Connection<S: SubjectType> : ObserverType, Disposable {
     private var _lock: RecursiveLock
     // state
     private var _parent: ConnectableObservableAdapter<S>?
-    private var _subscription: Disposable?
+    private var _subscription : Disposable?
     private var _subjectObserver: S.SubjectObserverType
 
     private var _disposed: Bool = false
@@ -69,14 +71,14 @@ final class Connection<S: SubjectType> : ObserverType, Disposable {
             self.dispose()
         }
     }
-
+    
     func dispose() {
         _lock.lock(); defer { _lock.unlock() } // {
             _disposed = true
             guard let parent = _parent else {
                 return
             }
-
+        
             if parent._connection === self {
                 parent._connection = nil
             }
@@ -91,21 +93,21 @@ final class Connection<S: SubjectType> : ObserverType, Disposable {
 final class ConnectableObservableAdapter<S: SubjectType>
     : ConnectableObservable<S.E> {
     typealias ConnectionType = Connection<S>
-
+    
     fileprivate let _subject: S
     fileprivate let _source: Observable<S.SubjectObserverType.E>
-
+    
     fileprivate let _lock = RecursiveLock()
-
+    
     // state
     fileprivate var _connection: ConnectionType?
-
+    
     init(source: Observable<S.SubjectObserverType.E>, subject: S) {
         _source = source
         _subject = subject
         _connection = nil
     }
-
+    
     override func connect() -> Disposable {
         return _lock.calculateLocked {
             if let connection = _connection {
@@ -120,8 +122,8 @@ final class ConnectableObservableAdapter<S: SubjectType>
             return connection
         }
     }
-
-    override func subscribe<O: ObserverType>(_ observer: O) -> Disposable where O.E == S.E {
+    
+    override func subscribe<O : ObserverType>(_ observer: O) -> Disposable where O.E == S.E {
         return _subject.subscribe(observer)
     }
 }

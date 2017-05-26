@@ -14,7 +14,10 @@ import RxSwift
 import UIKit
 
 /// For more information take a look at `DelegateProxyType`.
-public class RxScrollViewDelegateProxy: DelegateProxy, UIScrollViewDelegate, DelegateProxyType {
+public class RxScrollViewDelegateProxy
+    : DelegateProxy
+    , UIScrollViewDelegate
+    , DelegateProxyType {
 
     fileprivate var _contentOffsetBehaviorSubject: BehaviorSubject<CGPoint>?
     fileprivate var _contentOffsetPublishSubject: PublishSubject<()>?
@@ -53,7 +56,7 @@ public class RxScrollViewDelegateProxy: DelegateProxy, UIScrollViewDelegate, Del
         self.scrollView = castOrFatalError(parentObject)
         super.init(parentObject: parentObject)
     }
-
+    
     // MARK: delegate methods
 
     /// For more information take a look at `DelegateProxyType`.
@@ -66,7 +69,7 @@ public class RxScrollViewDelegateProxy: DelegateProxy, UIScrollViewDelegate, Del
         }
         self._forwardToDelegate?.scrollViewDidScroll?(scrollView)
     }
-
+    
     // MARK: delegate proxy
 
     /// For more information take a look at `DelegateProxyType`.
@@ -86,7 +89,7 @@ public class RxScrollViewDelegateProxy: DelegateProxy, UIScrollViewDelegate, Del
         let scrollView: UIScrollView = castOrFatalError(object)
         return scrollView.delegate
     }
-
+    
     deinit {
         if let subject = _contentOffsetBehaviorSubject {
             subject.on(.completed)

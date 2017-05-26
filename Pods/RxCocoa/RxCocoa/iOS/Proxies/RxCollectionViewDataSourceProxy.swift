@@ -15,21 +15,27 @@ import RxSwift
 
 let collectionViewDataSourceNotSet = CollectionViewDataSourceNotSet()
 
-final class CollectionViewDataSourceNotSet: NSObject, UICollectionViewDataSource {
+final class CollectionViewDataSourceNotSet
+    : NSObject
+    , UICollectionViewDataSource {
+
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 0
     }
-
+    
     // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         rxAbstractMethod(message: dataSourceNotSet)
     }
-
+    
 }
 
 /// For more information take a look at `DelegateProxyType`.
-public class RxCollectionViewDataSourceProxy: DelegateProxy, UICollectionViewDataSource, DelegateProxyType {
+public class RxCollectionViewDataSourceProxy
+    : DelegateProxy
+    , UICollectionViewDataSource
+    , DelegateProxyType {
 
     /// Typed parent object.
     public weak private(set) var collectionView: UICollectionView?
@@ -43,19 +49,19 @@ public class RxCollectionViewDataSourceProxy: DelegateProxy, UICollectionViewDat
         self.collectionView = castOrFatalError(parentObject)
         super.init(parentObject: parentObject)
     }
-
+    
     // MARK: delegate
 
     /// Required delegate method implementation.
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (_requiredMethodsDataSource ?? collectionViewDataSourceNotSet).collectionView(collectionView, numberOfItemsInSection: section)
     }
-
+    
     /// Required delegate method implementation.
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return (_requiredMethodsDataSource ?? collectionViewDataSourceNotSet).collectionView(collectionView, cellForItemAt: indexPath)
     }
-
+    
     // MARK: proxy
 
     /// For more information take a look at `DelegateProxyType`.
