@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Comment" representedClassName=".Comment" parentEntity="Item" syncable="YES" codeGenerationType="category">
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="children" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Comment" inverseName="parentComment" inverseEntity="Comment" syncable="YES"/>
-        <relationship name="parentComment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Comment" inverseName="children" inverseEntity="Comment" syncable="YES"/>
-        <relationship name="parentStory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Story" inverseName="children" inverseEntity="Story" syncable="YES"/>
+        <relationship name="childrenSet" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Comment" inverseName="parent" inverseEntity="Comment" syncable="YES"/>
+        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Comment" inverseName="childrenSet" inverseEntity="Comment" syncable="YES"/>
+        <relationship name="story" maxCount="1" deletionRule="Nullify" destinationEntity="Story" inverseName="commentsSet" inverseEntity="Story" syncable="YES"/>
     </entity>
     <entity name="Item" representedClassName=".Item" isAbstract="YES" syncable="YES" codeGenerationType="category">
         <attribute name="author" attributeType="String" syncable="YES"/>
@@ -16,11 +16,11 @@
         <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="children" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Comment" inverseName="parentStory" inverseEntity="Comment" syncable="YES"/>
+        <relationship name="commentsSet" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Comment" inverseName="story" inverseEntity="Comment" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Comment" positionX="144" positionY="117" width="128" height="30"/>
+        <element name="Comment" positionX="144" positionY="117" width="128" height="103"/>
         <element name="Item" positionX="36" positionY="54" width="128" height="105"/>
-        <element name="Story" positionX="234" positionY="126" width="128" height="30"/>
+        <element name="Story" positionX="234" positionY="126" width="128" height="103"/>
     </elements>
 </model>
