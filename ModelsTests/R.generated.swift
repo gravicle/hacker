@@ -20,14 +20,54 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.file` struct is generated, and contains static references to 1 files.
+  /// This `R.file` struct is generated, and contains static references to 6 files.
   struct file {
+    /// Resource file `fullStory.json`.
+    static let fullStoryJson = Rswift.FileResource(bundle: R.hostingBundle, name: "fullStory", pathExtension: "json")
     /// Resource file `story.json`.
     static let storyJson = Rswift.FileResource(bundle: R.hostingBundle, name: "story", pathExtension: "json")
+    /// Resource file `storyWithInvalidComment.json`.
+    static let storyWithInvalidCommentJson = Rswift.FileResource(bundle: R.hostingBundle, name: "storyWithInvalidComment", pathExtension: "json")
+    /// Resource file `storyWithNegativePoints.json`.
+    static let storyWithNegativePointsJson = Rswift.FileResource(bundle: R.hostingBundle, name: "storyWithNegativePoints", pathExtension: "json")
+    /// Resource file `storyWithoutID.json`.
+    static let storyWithoutIDJson = Rswift.FileResource(bundle: R.hostingBundle, name: "storyWithoutID", pathExtension: "json")
+    /// Resource file `storyWithoutPoints.json`.
+    static let storyWithoutPointsJson = Rswift.FileResource(bundle: R.hostingBundle, name: "storyWithoutPoints", pathExtension: "json")
+    
+    /// `bundle.url(forResource: "fullStory", withExtension: "json")`
+    static func fullStoryJson(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.fullStoryJson
+      return fileResource.bundle.url(forResource: fileResource)
+    }
     
     /// `bundle.url(forResource: "story", withExtension: "json")`
     static func storyJson(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.storyJson
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
+    /// `bundle.url(forResource: "storyWithInvalidComment", withExtension: "json")`
+    static func storyWithInvalidCommentJson(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.storyWithInvalidCommentJson
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
+    /// `bundle.url(forResource: "storyWithNegativePoints", withExtension: "json")`
+    static func storyWithNegativePointsJson(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.storyWithNegativePointsJson
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
+    /// `bundle.url(forResource: "storyWithoutID", withExtension: "json")`
+    static func storyWithoutIDJson(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.storyWithoutIDJson
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
+    /// `bundle.url(forResource: "storyWithoutPoints", withExtension: "json")`
+    static func storyWithoutPointsJson(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.storyWithoutPointsJson
       return fileResource.bundle.url(forResource: fileResource)
     }
     

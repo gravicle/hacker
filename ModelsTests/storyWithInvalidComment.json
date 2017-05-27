@@ -1,0 +1,49 @@
+{
+  "id": 3742902,
+  "created_at": "2012-03-23T00:40:39.000Z",
+  "created_at_i": 1332463239,
+  "type": "story",
+  "author": "olalonde",
+  "title": "Show HN: This up votes itself",
+  "url": "htpp://test.com",
+  "text": "This is story text",
+  "points": 3381,
+  "children": [
+    {
+      "id": 3743110,
+      "created_at": "2012-03-23T01:28:58.000Z",
+      "created_at_i": 1332466138,
+      "type": "comment",
+      "author": "palish",
+      "text": "test text",
+      "points": 44,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": []
+    },
+    {
+      "id": null,
+      "created_at": "2012-03-23T00:46:23.000Z",
+      "created_at_i": 1332463583,
+      "type": "comment",
+      "author": "olalonde",
+      "text": "\u003Cp\u003ECredits to \u003Ca href=\"http://news.ycombinator.com/item?id=3742742\" rel=\"nofollow\"\u003Ehttp://news.ycombinator.com/item?id=3742742\u003C/a\u003E (GreekOphion) for finding the bug.\u003C/p\u003E",
+      "points": 17,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": []
+    },
+    {
+      "id": 3742988,
+      "created_at": "2012-03-23T01:00:31.000Z",
+      "created_at_i": 1332464431,
+      "type": "comment",
+      "author": "cs702",
+      "text": "\u003Cp\u003EThis looks set to become the all-time #1-ranked submission soon.  Compare it to other top-ranked submissions here: \u003Ca href=\"http://www.hnsearch.com/search#request/all\u0026#38;q=+\u0026#38;sortby=points+desc\" rel=\"nofollow\"\u003Ehttp://www.hnsearch.com/search#request/all\u0026#38;q=+\u0026#38;sortb...\u003C/a\u003E\u003C/p\u003E\u003Cp\u003E[EDIT: corrected link.  Thanks ma2rten!]\u003C/p\u003E",
+      "points": 6,
+      "parent_id": 3742902,
+      "story_id": 3742902,
+      "children": []
+    }
+  ]
+}
