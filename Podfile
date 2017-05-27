@@ -4,20 +4,12 @@ def testingPods
   pod 'Nimble'
 end
 
-def rxPods
-  pod 'RxSwift'
-  pod 'RxCocoa'
-end
-
-def networkingPods
-  pod "ModelMapper", :git => 'git@github.com:gravicle/mapper.git', :branch => 'master'
-end
-
 target 'Hacker' do
   use_frameworks!
   inhibit_all_warnings!
 
-  rxPods
+  pod 'RxSwift'
+  pod 'RxCocoa'
   pod 'Library', :path => '~/Projects/Library'
   pod 'R.swift', '~> 3.2'
   pod 'SwiftLint'
@@ -33,7 +25,7 @@ target 'Hacker' do
   end
 
   target 'Models' do
-    networkingPods
+    pod "ModelMapper", :git => 'git@github.com:gravicle/mapper.git', :branch => 'master'
 
     target 'ModelsTests' do
       inherit! :search_paths
