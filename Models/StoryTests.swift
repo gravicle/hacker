@@ -26,7 +26,7 @@ class StoryTests: XCTestCase {
         }
     }
 
-    func testParsingStory() throws {
+    func testStory() throws {
         let story = try Story(map: .init(file: R.file.storyJson()!), context: context)
         expect(story.id) == "3742902"
         expect(story.author) == "olalonde"
@@ -35,10 +35,20 @@ class StoryTests: XCTestCase {
         expect(story.points) == 3381
         expect(story.text) == "This is story text"
         expect(story.comments.count) == 5
+
+        let comment = story.comments[0]
+        expect(comment.text) == "test text"
+        expect(comment.points) == 44
+        expect(comment.story) == story
+        expect(comment.children.count) == 1
+
+        let childCommenet = comment.children[0]
+        expect(childCommenet.parent) == comment
+
         expect(try self.context.save()).toNot(throwError())
     }
 
-    func testParsingStoryWithNegativePoints() throws {
+    func testParsingAStoryWithNegativePoints() throws {
         let story = try Story(map: .init(file: R.file.storyWithNegativePointsJson()!), context: context)
         expect(story.points) == -1
         expect(try self.context.save()).toNot(throwError())
