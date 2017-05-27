@@ -1,0 +1,39 @@
+{
+  "name": "Library",
+  "version": "0.2",
+  "summary": "iOS helper framework",
+  "description": "iOS helper framework.",
+  "homepage": "https://github.com/gravicle/library",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Amit Jain": "gravicle@gmail.com"
+  },
+  "social_media_url": "http://twitter.com/gravicle",
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source": {
+    "git": "git@github.com:gravicle/library.git",
+    "tag": "0.2"
+  },
+  "source_files": [
+    "Sources",
+    "Sources/**/*.{h,m}"
+  ],
+  "exclude_files": "Sources/Exclude",
+  "frameworks": [
+    "UIKit",
+    "Foundation"
+  ],
+  "dependencies": {
+    "RxSwift": [
+      "~> 3.4"
+    ],
+    "RxCocoa": [
+      "~> 3.4"
+    ]
+  }
+}

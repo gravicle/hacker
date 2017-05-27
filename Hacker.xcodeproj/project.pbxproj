@@ -332,8 +332,8 @@
 			buildConfigurationList = C891B7AA1ED7B1C700249A53 /* Build configuration list for PBXNativeTarget "Hacker" */;
 			buildPhases = (
 				4188720B043E2CBDA51DECE8 /* [CP] Check Pods Manifest.lock */,
-				EF9D69AFB4DFB9A180509729 /* SwiftLint */,
-				DEDE6FEE7FF8471938B9F22C /* R.swift */,
+				12D11E98F56A9C48D6A3C8BE /* SwiftLint */,
+				8F39C4BC8688B5A09561D70E /* R.swift */,
 				C891B77B1ED7B1C700249A53 /* Sources */,
 				C891B77C1ED7B1C700249A53 /* Frameworks */,
 				C891B77D1ED7B1C700249A53 /* Resources */,
@@ -357,8 +357,8 @@
 			buildConfigurationList = C891B7AD1ED7B1C700249A53 /* Build configuration list for PBXNativeTarget "HackerTests" */;
 			buildPhases = (
 				EB9B087B89021C829CDE3DE9 /* [CP] Check Pods Manifest.lock */,
-				26BF07AFF47DF902E976DE61 /* SwiftLint */,
-				027D76E92DC892C298FE5799 /* R.swift */,
+				CBDD017DB19D020C2AA66A50 /* SwiftLint */,
+				72EE35C431CF37E3DFC178C5 /* R.swift */,
 				C891B7921ED7B1C700249A53 /* Sources */,
 				C891B7931ED7B1C700249A53 /* Frameworks */,
 				C891B7941ED7B1C700249A53 /* Resources */,
@@ -380,8 +380,8 @@
 			buildConfigurationList = C891B7B01ED7B1C700249A53 /* Build configuration list for PBXNativeTarget "HackerUITests" */;
 			buildPhases = (
 				318B7A06D8113C0520B3FB08 /* [CP] Check Pods Manifest.lock */,
-				61544D6350F4E4E4707B053D /* SwiftLint */,
-				D8F44971DA2611FFB15B5F58 /* R.swift */,
+				7EE336F7525B5B345BBF7277 /* SwiftLint */,
+				96C2448907DD0A436BC02421 /* R.swift */,
 				C891B79D1ED7B1C700249A53 /* Sources */,
 				C891B79E1ED7B1C700249A53 /* Frameworks */,
 				C891B79F1ED7B1C700249A53 /* Resources */,
@@ -403,8 +403,8 @@
 			buildConfigurationList = C891B7D01ED7BAD300249A53 /* Build configuration list for PBXNativeTarget "Models" */;
 			buildPhases = (
 				B7F17AD80CD108D4373DEE7B /* [CP] Check Pods Manifest.lock */,
-				3B12472C3A56810287EAAA06 /* SwiftLint */,
-				6FB3C4846CB81AB2BD283C0C /* R.swift */,
+				24D6451CF10730FB796F7592 /* SwiftLint */,
+				8680306300052B21A10FD7EB /* R.swift */,
 				C891B7B41ED7BAD200249A53 /* Sources */,
 				C891B7B51ED7BAD200249A53 /* Frameworks */,
 				C891B7B61ED7BAD200249A53 /* Headers */,
@@ -425,8 +425,8 @@
 			buildConfigurationList = C891B7D41ED7BAD300249A53 /* Build configuration list for PBXNativeTarget "ModelsTests" */;
 			buildPhases = (
 				FFB8435AF5E6BCBCB6863A5C /* [CP] Check Pods Manifest.lock */,
-				AD9EC471DB60EEFBDC93A2FE /* SwiftLint */,
-				FFADF3D37F365396993D9A69 /* R.swift */,
+				1ACFD38F8D979EECC3E03559 /* SwiftLint */,
+				34F0FCBC3C1AFDC385193A43 /* R.swift */,
 				C891B7BD1ED7BAD300249A53 /* Sources */,
 				C891B7BE1ED7BAD300249A53 /* Frameworks */,
 				C891B7BF1ED7BAD300249A53 /* Resources */,
@@ -580,6 +580,51 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ModelsTests/Pods-ModelsTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		12D11E98F56A9C48D6A3C8BE /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" autocorrect";
+			showEnvVarsInLog = 1;
+		};
+		1ACFD38F8D979EECC3E03559 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" autocorrect";
+			showEnvVarsInLog = 1;
+		};
+		24D6451CF10730FB796F7592 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" autocorrect";
+			showEnvVarsInLog = 1;
+		};
 		26BF07AFF47DF902E976DE61 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -623,6 +668,21 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		34F0FCBC3C1AFDC385193A43 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT/ModelsTests/\"";
+			showEnvVarsInLog = 1;
 		};
 		3B12472C3A56810287EAAA06 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -711,6 +771,81 @@
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT/Models/\"";
 		};
+		72EE35C431CF37E3DFC178C5 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT/HackerTests/\"";
+			showEnvVarsInLog = 1;
+		};
+		7EE336F7525B5B345BBF7277 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" autocorrect";
+			showEnvVarsInLog = 1;
+		};
+		8680306300052B21A10FD7EB /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT/Models/\"";
+			showEnvVarsInLog = 1;
+		};
+		8F39C4BC8688B5A09561D70E /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT/Hacker/\"";
+			showEnvVarsInLog = 1;
+		};
+		96C2448907DD0A436BC02421 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT/HackerUITests/\"";
+			showEnvVarsInLog = 1;
+		};
 		AD9EC471DB60EEFBDC93A2FE /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -783,6 +918,21 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HackerTests/Pods-HackerTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		CBDD017DB19D020C2AA66A50 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" autocorrect";
+			showEnvVarsInLog = 1;
 		};
 		CF8D49A6DB9FB3B016EBBCA4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;

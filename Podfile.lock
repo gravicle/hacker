@@ -1,4 +1,7 @@
 PODS:
+  - Library (0.2):
+    - RxCocoa (~> 3.4)
+    - RxSwift (~> 3.4)
   - ModelMapper (6.0.0)
   - Nimble (7.0.0)
   - R.swift (3.2.0):
@@ -10,6 +13,7 @@ PODS:
   - SwiftLint (0.18.1)
 
 DEPENDENCIES:
+  - Library (from `~/Projects/Library`)
   - ModelMapper (from `git@github.com:gravicle/mapper.git`, branch `master`)
   - Nimble
   - R.swift (~> 3.2)
@@ -18,6 +22,8 @@ DEPENDENCIES:
   - SwiftLint
 
 EXTERNAL SOURCES:
+  Library:
+    :path: "~/Projects/Library"
   ModelMapper:
     :branch: master
     :git: git@github.com:gravicle/mapper.git
@@ -28,6 +34,7 @@ CHECKOUT OPTIONS:
     :git: git@github.com:gravicle/mapper.git
 
 SPEC CHECKSUMS:
+  Library: b5634ac115fab19031b8fa75ffa606ed5cdfe551
   ModelMapper: 53895452a82fea0cd24c5a51bbd7fc17b49d3990
   Nimble: 874982b605d4d752fcac6be695d13c502de84b1b
   R.swift: 207a372a2b5977caef440c696a368009460641d1
@@ -36,6 +43,6 @@ SPEC CHECKSUMS:
   RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
   SwiftLint: b467d08f5b25dc3b3cfed243d8e1b74b91714c67
 
-PODFILE CHECKSUM: a518228a4f42525873ef5baf6ec21578080faf48
+PODFILE CHECKSUM: 4ffa8e4f3d64626deb598a1fd1758d42cf29642b
 
 COCOAPODS: 1.2.1

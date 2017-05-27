@@ -18,6 +18,7 @@ target 'Hacker' do
   inhibit_all_warnings!
 
   rxPods
+  pod 'Library', :path => '~/Projects/Library'
   pod 'R.swift', '~> 3.2'
   pod 'SwiftLint'
 
