@@ -27,9 +27,11 @@ struct Network {
                     let mapper = try map(from: data)
                     let resource = try request.map(mapper)
                     observer.onNext(resource)
-                } catch { observer.onError(error) }
+                }
+                catch { observer.onError(error) }
             }
 
+            task.resume()
             return Disposables.create { task.cancel() }
         }
         .asSingle()
