@@ -10,66 +10,66 @@ import Rswift
 struct R: Rswift.Validatable {
   fileprivate static let applicationLocale = hostingBundle.preferredLocalizations.first.flatMap(Locale.init) ?? Locale.current
   fileprivate static let hostingBundle = Bundle(for: R.Class.self)
-  
+
   static func validate() throws {
     try intern.validate()
   }
-  
+
   /// This `R.color` struct is generated, and contains static references to 0 color palettes.
   struct color {
     fileprivate init() {}
   }
-  
+
   /// This `R.file` struct is generated, and contains static references to 0 files.
   struct file {
     fileprivate init() {}
   }
-  
+
   /// This `R.font` struct is generated, and contains static references to 0 fonts.
   struct font {
     fileprivate init() {}
   }
-  
+
   /// This `R.image` struct is generated, and contains static references to 0 images.
   struct image {
     fileprivate init() {}
   }
-  
+
   /// This `R.nib` struct is generated, and contains static references to 0 nibs.
   struct nib {
     fileprivate init() {}
   }
-  
+
   /// This `R.reuseIdentifier` struct is generated, and contains static references to 0 reuse identifiers.
   struct reuseIdentifier {
     fileprivate init() {}
   }
-  
+
   /// This `R.segue` struct is generated, and contains static references to 0 view controllers.
   struct segue {
     fileprivate init() {}
   }
-  
+
   /// This `R.storyboard` struct is generated, and contains static references to 0 storyboards.
   struct storyboard {
     fileprivate init() {}
   }
-  
+
   /// This `R.string` struct is generated, and contains static references to 0 localization tables.
   struct string {
     fileprivate init() {}
   }
-  
+
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
       // There are no resources to validate
     }
-    
+
     fileprivate init() {}
   }
-  
+
   fileprivate class Class {}
-  
+
   fileprivate init() {}
 }
 
@@ -77,10 +77,10 @@ struct _R {
   struct nib {
     fileprivate init() {}
   }
-  
+
   struct storyboard {
     fileprivate init() {}
   }
-  
+
   fileprivate init() {}
 }

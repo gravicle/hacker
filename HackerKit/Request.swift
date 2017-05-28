@@ -1,18 +1,31 @@
 import Mapper
 import Library
 
-protocol Request {
-    associatedtype Resource
+public protocol Request {
     var api: API { get }
-    var path: String? { get }
-    var map: ((Mapper) throws -> Resource) { get }
+    var endpoint: String? { get }
+    var params: Parameters { get }
 }
 
 extension Request {
 
     var url: URL? {
-        let resolvedPath = api.host.fromAppendingPathComponent(path ?? "")
-        return URL(string: resolvedPath)
+        var path = api.host
+
+        if let endpoint = endpoint, endpoint.isNotEmpty {
+             path = path.fromAppendingPathComponent(endpoint)
+        }
+
+        let queryString = params
+            .flatMap { (key, value) in
+                return value.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed).flatMap { key + "=" + $0 }
+            }
+            .joined(separator: "&")
+        if queryString.isNotEmpty {
+            path += "?" + queryString
+        }
+
+        return URL(string: path)
     }
 
 }

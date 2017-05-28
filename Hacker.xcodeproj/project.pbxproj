@@ -21,6 +21,9 @@
 		C8429AF21EDA5BF600384268 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8429AF11EDA5BF600384268 /* Request.swift */; };
 		C8429AF51EDA5C4400384268 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8429AF41EDA5C4400384268 /* API.swift */; };
 		C8429AF91EDA5E3100384268 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8429AF81EDA5E3100384268 /* Network.swift */; };
+		C8429AFB1EDAA6BD00384268 /* HNRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8429AFA1EDAA6BD00384268 /* HNRequest.swift */; };
+		C8429AFD1EDAABDF00384268 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8429AFC1EDAABDF00384268 /* Parameters.swift */; };
+		C8429AFF1EDAAEE500384268 /* RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8429AFE1EDAAEE500384268 /* RequestTests.swift */; };
 		C891B7831ED7B1C700249A53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C891B7821ED7B1C700249A53 /* AppDelegate.swift */; };
 		C891B7851ED7B1C700249A53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C891B7841ED7B1C700249A53 /* ViewController.swift */; };
 		C891B7881ED7B1C700249A53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C891B7861ED7B1C700249A53 /* Main.storyboard */; };
@@ -126,6 +129,9 @@
 		C8429AF11EDA5BF600384268 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		C8429AF41EDA5C4400384268 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		C8429AF81EDA5E3100384268 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		C8429AFA1EDAA6BD00384268 /* HNRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HNRequest.swift; sourceTree = "<group>"; };
+		C8429AFC1EDAABDF00384268 /* Parameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
+		C8429AFE1EDAAEE500384268 /* RequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestTests.swift; sourceTree = "<group>"; };
 		C891B77F1ED7B1C700249A53 /* Hacker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hacker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C891B7821ED7B1C700249A53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C891B7841ED7B1C700249A53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -263,8 +269,11 @@
 		C8429AEE1EDA5BCC00384268 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				C8429AF11EDA5BF600384268 /* Request.swift */,
 				C8429AF41EDA5C4400384268 /* API.swift */,
+				C8429AFC1EDAABDF00384268 /* Parameters.swift */,
+				C8429AF11EDA5BF600384268 /* Request.swift */,
+				C8429AFE1EDAAEE500384268 /* RequestTests.swift */,
+				C8429AFA1EDAA6BD00384268 /* HNRequest.swift */,
 				C8429AF81EDA5E3100384268 /* Network.swift */,
 			);
 			name = Networking;
@@ -393,8 +402,8 @@
 			buildConfigurationList = C891B7AA1ED7B1C700249A53 /* Build configuration list for PBXNativeTarget "Hacker" */;
 			buildPhases = (
 				4188720B043E2CBDA51DECE8 /* [CP] Check Pods Manifest.lock */,
-				26B2E66089C794BCFF30618E /* SwiftLint */,
-				738F0E096FC3B9FFEEDB8F43 /* R.swift */,
+				7EEFDBCBA47ABA60A814C82B /* SwiftLint */,
+				58E8D3556BB8E0F569E13E8B /* R.swift */,
 				C891B77B1ED7B1C700249A53 /* Sources */,
 				C891B77C1ED7B1C700249A53 /* Frameworks */,
 				C891B77D1ED7B1C700249A53 /* Resources */,
@@ -418,8 +427,8 @@
 			buildConfigurationList = C891B7AD1ED7B1C700249A53 /* Build configuration list for PBXNativeTarget "HackerTests" */;
 			buildPhases = (
 				EB9B087B89021C829CDE3DE9 /* [CP] Check Pods Manifest.lock */,
-				A78268DA89CA72DDC610A53E /* SwiftLint */,
-				C527974199A3EF59111A8890 /* R.swift */,
+				96806E570290D6B95D609A02 /* SwiftLint */,
+				8AD7C9364BB5382841661FA1 /* R.swift */,
 				C891B7921ED7B1C700249A53 /* Sources */,
 				C891B7931ED7B1C700249A53 /* Frameworks */,
 				C891B7941ED7B1C700249A53 /* Resources */,
@@ -441,8 +450,8 @@
 			buildConfigurationList = C891B7B01ED7B1C700249A53 /* Build configuration list for PBXNativeTarget "HackerUITests" */;
 			buildPhases = (
 				318B7A06D8113C0520B3FB08 /* [CP] Check Pods Manifest.lock */,
-				D09E72780653B29C01E74007 /* SwiftLint */,
-				6424144A96F981A0EB566BC2 /* R.swift */,
+				4C5FA97656B3AE63ADB8BC08 /* SwiftLint */,
+				FFDBDBC2E4DE493147C96C0F /* R.swift */,
 				C891B79D1ED7B1C700249A53 /* Sources */,
 				C891B79E1ED7B1C700249A53 /* Frameworks */,
 				C891B79F1ED7B1C700249A53 /* Resources */,
@@ -464,8 +473,8 @@
 			buildConfigurationList = C8A407871EDA576500ED8135 /* Build configuration list for PBXNativeTarget "HackerKit" */;
 			buildPhases = (
 				B11B563DA06F5BC5836EC371 /* [CP] Check Pods Manifest.lock */,
-				5228B66D85589DBFF2807086 /* SwiftLint */,
-				E55FB15B535C90A66D31884A /* R.swift */,
+				23158B126689FB49FB8A2E05 /* SwiftLint */,
+				D15A1F91AB2B0C216A67C76C /* R.swift */,
 				C8A4076B1EDA576500ED8135 /* Sources */,
 				C8A4076C1EDA576500ED8135 /* Frameworks */,
 				C8A4076D1EDA576500ED8135 /* Headers */,
@@ -486,8 +495,8 @@
 			buildConfigurationList = C8A4078A1EDA576500ED8135 /* Build configuration list for PBXNativeTarget "HackerKitTests" */;
 			buildPhases = (
 				672F7A51238C5C3DEF00A466 /* [CP] Check Pods Manifest.lock */,
-				42ECF82987D45219957F395A /* SwiftLint */,
-				12F29283D0A58D0507D387FB /* R.swift */,
+				C445B17383A11DACA9BFC01A /* SwiftLint */,
+				AEED774F97E347B984F3F305 /* R.swift */,
 				C8A407741EDA576500ED8135 /* Sources */,
 				C8A407751EDA576500ED8135 /* Frameworks */,
 				C8A407761EDA576500ED8135 /* Resources */,
@@ -631,6 +640,21 @@
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT/HackerKitTests/\"";
 		};
+		23158B126689FB49FB8A2E05 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" autocorrect";
+			showEnvVarsInLog = 1;
+		};
 		26B2E66089C794BCFF30618E /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -704,6 +728,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hacker/Pods-Hacker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4C5FA97656B3AE63ADB8BC08 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" autocorrect";
+			showEnvVarsInLog = 1;
+		};
 		5228B66D85589DBFF2807086 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -717,6 +756,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" autocorrect";
+		};
+		58E8D3556BB8E0F569E13E8B /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT/Hacker/\"";
+			showEnvVarsInLog = 1;
 		};
 		5DF2EF34C52391BD87B28C73 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -776,6 +830,51 @@
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT/Hacker/\"";
 		};
+		7EEFDBCBA47ABA60A814C82B /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" autocorrect";
+			showEnvVarsInLog = 1;
+		};
+		8AD7C9364BB5382841661FA1 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT/HackerTests/\"";
+			showEnvVarsInLog = 1;
+		};
+		96806E570290D6B95D609A02 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" autocorrect";
+			showEnvVarsInLog = 1;
+		};
 		99DFE91148637E34C89D43F7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -819,6 +918,21 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HackerKitTests/Pods-HackerKitTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		AEED774F97E347B984F3F305 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT/HackerKitTests/\"";
+			showEnvVarsInLog = 1;
 		};
 		B11B563DA06F5BC5836EC371 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -864,6 +978,21 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HackerKitTests/Pods-HackerKitTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		C445B17383A11DACA9BFC01A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" autocorrect";
+			showEnvVarsInLog = 1;
 		};
 		C527974199A3EF59111A8890 /* R.swift */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -937,6 +1066,21 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" autocorrect";
 		};
+		D15A1F91AB2B0C216A67C76C /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT/HackerKit/\"";
+			showEnvVarsInLog = 1;
+		};
 		E219D61E97B0069E6A95E72E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -981,6 +1125,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		FFDBDBC2E4DE493147C96C0F /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT/HackerUITests/\"";
+			showEnvVarsInLog = 1;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1016,6 +1175,8 @@
 				C8BF80751EDA57FF00102112 /* MappableArrayOfManagedObjects.swift in Sources */,
 				C8BF80741EDA57FF00102112 /* Map+Int32.swift in Sources */,
 				C8BF80771EDA57FF00102112 /* R.generated.swift in Sources */,
+				C8429AFD1EDAABDF00384268 /* Parameters.swift in Sources */,
+				C8429AFB1EDAA6BD00384268 /* HNRequest.swift in Sources */,
 				C8429AF21EDA5BF600384268 /* Request.swift in Sources */,
 				C8BF80731EDA57FF00102112 /* JSONDecodable.swift in Sources */,
 				C8BF807E1EDA58C700102112 /* Hacker.xcdatamodeld in Sources */,
@@ -1031,6 +1192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8429AFF1EDAAEE500384268 /* RequestTests.swift in Sources */,
 				C8BF807A1EDA580C00102112 /* StoryTests.swift in Sources */,
 				C8429AEB1EDA5B0C00384268 /* R.generated.swift in Sources */,
 				C8429AED1EDA5B2300384268 /* MapperFromFile.swift in Sources */,
