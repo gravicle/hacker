@@ -1,10 +1,11 @@
 import Mapper
 import Library
 
-struct Request<Resource> {
-    let api: API
-    let path: String?
-    let map: ((Mapper) throws -> Resource)
+protocol Request {
+    associatedtype Resource
+    var api: API { get }
+    var path: String? { get }
+    var map: ((Mapper) throws -> Resource) { get }
 }
 
 extension Request {

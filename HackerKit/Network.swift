@@ -6,7 +6,7 @@ struct Network {
 
     private init() {}
 
-    static func request<Resource>(_ request: Request<Resource>, using session: URLSession) -> Single<Resource> {
+    static func request<R: Request>(_ request: R, using session: URLSession) -> Single<R.Resource> {
         guard let url = request.url else {
             return Observable.error(Error(desc: "Malformed Request: \(request)")).asSingle()
         }
@@ -27,8 +27,7 @@ struct Network {
                     let mapper = try map(from: data)
                     let resource = try request.map(mapper)
                     observer.onNext(resource)
-                }
-                catch { observer.onError(error) }
+                } catch { observer.onError(error) }
             }
 
             task.resume()
