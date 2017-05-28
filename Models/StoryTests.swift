@@ -62,6 +62,7 @@ class StoryTests: XCTestCase {
 
     func testThatAnInvalidStoryIsNotParsed() {
         expect(try Story(map: .init(file: R.file.storyWithoutIDJson()!), context: self.context)).to(throwError())
+        expect(try self.context.save()).toNot(throwError())
     }
 
     func testThatCommentsAreParsedByIgnoringInvalidComments() throws {
