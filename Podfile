@@ -24,10 +24,11 @@ target 'Hacker' do
     testingPods
   end
 
-  target 'Models' do
+  target 'HackerKit' do
+    inherit! :search_paths
     pod "ModelMapper", :git => 'git@github.com:gravicle/mapper.git', :branch => 'master'
 
-    target 'ModelsTests' do
+    target 'HackerKitTests' do
       inherit! :search_paths
       testingPods
     end

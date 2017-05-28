@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_Hacker_ModelsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_Hacker_ModelsVersionString[];
+FOUNDATION_EXPORT double Pods_HackerKitTestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_HackerKitTestsVersionString[];
 

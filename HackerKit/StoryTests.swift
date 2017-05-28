@@ -1,7 +1,7 @@
 import CoreData
 import XCTest
 import Nimble
-@testable import Models
+@testable import HackerKit
 
 class StoryTests: XCTestCase {
 
@@ -13,7 +13,7 @@ class StoryTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        let modelsBundle = Bundle(identifier: "me.amitjain.Models")
+        let modelsBundle = Bundle(identifier: "me.amitjain.HackerKit")
         let modelURL = modelsBundle!.url(forResource: "Hacker", withExtension: "momd")!
         container = NSPersistentContainer(name: "Hacker", managedObjectModel: NSManagedObjectModel(contentsOf: modelURL)!)
 
