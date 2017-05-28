@@ -10,16 +10,16 @@ import Rswift
 struct R: Rswift.Validatable {
   fileprivate static let applicationLocale = hostingBundle.preferredLocalizations.first.flatMap(Locale.init) ?? Locale.current
   fileprivate static let hostingBundle = Bundle(for: R.Class.self)
-  
+
   static func validate() throws {
     try intern.validate()
   }
-  
+
   /// This `R.color` struct is generated, and contains static references to 0 color palettes.
   struct color {
     fileprivate init() {}
   }
-  
+
   /// This `R.file` struct is generated, and contains static references to 6 files.
   struct file {
     /// Resource file `fullStory.json`.
@@ -34,91 +34,91 @@ struct R: Rswift.Validatable {
     static let storyWithoutIDJson = Rswift.FileResource(bundle: R.hostingBundle, name: "storyWithoutID", pathExtension: "json")
     /// Resource file `storyWithoutPoints.json`.
     static let storyWithoutPointsJson = Rswift.FileResource(bundle: R.hostingBundle, name: "storyWithoutPoints", pathExtension: "json")
-    
+
     /// `bundle.url(forResource: "fullStory", withExtension: "json")`
     static func fullStoryJson(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.fullStoryJson
       return fileResource.bundle.url(forResource: fileResource)
     }
-    
+
     /// `bundle.url(forResource: "story", withExtension: "json")`
     static func storyJson(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.storyJson
       return fileResource.bundle.url(forResource: fileResource)
     }
-    
+
     /// `bundle.url(forResource: "storyWithInvalidComment", withExtension: "json")`
     static func storyWithInvalidCommentJson(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.storyWithInvalidCommentJson
       return fileResource.bundle.url(forResource: fileResource)
     }
-    
+
     /// `bundle.url(forResource: "storyWithNegativePoints", withExtension: "json")`
     static func storyWithNegativePointsJson(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.storyWithNegativePointsJson
       return fileResource.bundle.url(forResource: fileResource)
     }
-    
+
     /// `bundle.url(forResource: "storyWithoutID", withExtension: "json")`
     static func storyWithoutIDJson(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.storyWithoutIDJson
       return fileResource.bundle.url(forResource: fileResource)
     }
-    
+
     /// `bundle.url(forResource: "storyWithoutPoints", withExtension: "json")`
     static func storyWithoutPointsJson(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.storyWithoutPointsJson
       return fileResource.bundle.url(forResource: fileResource)
     }
-    
+
     fileprivate init() {}
   }
-  
+
   /// This `R.font` struct is generated, and contains static references to 0 fonts.
   struct font {
     fileprivate init() {}
   }
-  
+
   /// This `R.image` struct is generated, and contains static references to 0 images.
   struct image {
     fileprivate init() {}
   }
-  
+
   /// This `R.nib` struct is generated, and contains static references to 0 nibs.
   struct nib {
     fileprivate init() {}
   }
-  
+
   /// This `R.reuseIdentifier` struct is generated, and contains static references to 0 reuse identifiers.
   struct reuseIdentifier {
     fileprivate init() {}
   }
-  
+
   /// This `R.segue` struct is generated, and contains static references to 0 view controllers.
   struct segue {
     fileprivate init() {}
   }
-  
+
   /// This `R.storyboard` struct is generated, and contains static references to 0 storyboards.
   struct storyboard {
     fileprivate init() {}
   }
-  
+
   /// This `R.string` struct is generated, and contains static references to 0 localization tables.
   struct string {
     fileprivate init() {}
   }
-  
+
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
       // There are no resources to validate
     }
-    
+
     fileprivate init() {}
   }
-  
+
   fileprivate class Class {}
-  
+
   fileprivate init() {}
 }
 
@@ -126,10 +126,10 @@ struct _R {
   struct nib {
     fileprivate init() {}
   }
-  
+
   struct storyboard {
     fileprivate init() {}
   }
-  
+
   fileprivate init() {}
 }
