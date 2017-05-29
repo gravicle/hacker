@@ -4,6 +4,19 @@ PODS:
     - RxSwift (~> 3.4)
   - ModelMapper (6.0.0)
   - Nimble (7.0.0)
+  - OHHTTPStubs/Core (6.0.0)
+  - OHHTTPStubs/Default (6.0.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (6.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (6.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (6.0.0)
+  - OHHTTPStubs/Swift (6.0.0):
+    - OHHTTPStubs/Default
   - R.swift (3.2.0):
     - R.swift.Library (~> 3.0.2)
   - R.swift.Library (3.0.2)
@@ -16,6 +29,7 @@ DEPENDENCIES:
   - Library (from `~/Projects/Library`)
   - ModelMapper (from `git@github.com:gravicle/mapper.git`, branch `master`)
   - Nimble
+  - OHHTTPStubs/Swift
   - R.swift (~> 3.2)
   - RxCocoa
   - RxSwift
@@ -37,12 +51,13 @@ SPEC CHECKSUMS:
   Library: b5634ac115fab19031b8fa75ffa606ed5cdfe551
   ModelMapper: 53895452a82fea0cd24c5a51bbd7fc17b49d3990
   Nimble: 874982b605d4d752fcac6be695d13c502de84b1b
+  OHHTTPStubs: 752f9b11fd810a15162d50f11c06ff94f8e012eb
   R.swift: 207a372a2b5977caef440c696a368009460641d1
   R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
   RxCocoa: a8a5f1d061d0043e28f56976829f31ce63e8eb09
   RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
   SwiftLint: b467d08f5b25dc3b3cfed243d8e1b74b91714c67
 
-PODFILE CHECKSUM: 0dd23e686e9242b8cf442710447932e720fada55
+PODFILE CHECKSUM: 1b97bdc0ee0b81df392bfb3c8a905e94da263671
 
 COCOAPODS: 1.2.1

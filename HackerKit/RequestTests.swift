@@ -8,27 +8,27 @@ class RequestTests: XCTestCase {
 
     struct TestRequest: Request {
         let api: API = .init(host: testApi)
-        let endpoint: String?
+        let path: String?
         let params: Parameters
     }
 
     func testBuildingURLWithoutAnEndpointOrParams() {
-        let req = TestRequest(endpoint: nil, params: [:])
+        let req = TestRequest(path: nil, params: [:])
         expect(req.url) == URL(string: testApi)!
     }
 
     func testBuildingURLWithEndpoint() {
-        let req = TestRequest(endpoint: "test", params: [:])
+        let req = TestRequest(path: "test", params: [:])
         expect(req.url) == URL(string: testApi + "/" + "test")!
     }
 
     func testBuildingURLWithEndpointAndParams() {
-        let req = TestRequest(endpoint: "test", params: ["name": "erlich"])
+        let req = TestRequest(path: "test", params: ["name": "erlich"])
         expect(req.url) == URL(string: testApi + "/test?name=erlich")!
     }
 
     func testBuildingURLWithMultipleParams() {
-        let req = TestRequest(endpoint: "test", params: ["first_name": "erlich", "last_name": "bachman"])
+        let req = TestRequest(path: "test", params: ["first_name": "erlich", "last_name": "bachman"])
         expect(req.url) == URL(string: testApi + "/test?first_name=erlich&last_name=bachman")!
     }
 

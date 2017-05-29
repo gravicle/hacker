@@ -3,17 +3,17 @@ import Library
 
 public protocol Request {
     var api: API { get }
-    var endpoint: String? { get }
+    var path: String? { get }
     var params: Parameters { get }
 }
 
 extension Request {
 
     var url: URL? {
-        var path = api.host
+        var fullPath = api.host
 
-        if let endpoint = endpoint, endpoint.isNotEmpty {
-             path = path.fromAppendingPathComponent(endpoint)
+        if let path = path, path.isNotEmpty {
+             fullPath = fullPath.fromAppendingPathComponent(path)
         }
 
         let queryString = params
@@ -22,10 +22,10 @@ extension Request {
             }
             .joined(separator: "&")
         if queryString.isNotEmpty {
-            path += "?" + queryString
+            fullPath += "?" + queryString
         }
 
-        return URL(string: path)
+        return URL(string: fullPath)
     }
 
 }

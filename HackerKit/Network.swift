@@ -8,34 +8,25 @@ struct Network {
 
     static func request<R: Request>(_ request: R, using session: URLSession) -> Single<Mapper> {
         guard let url = request.url else {
-            return Observable.error(Error(desc: "Malformed Request: \(request)")).asSingle()
+            return Single.error(Error(desc: "Malformed Request: \(request)"))
         }
 
-        return Observable.create { (observer) -> Disposable in
+        return Single<Mapper>.create { (single) in
             let task = session.dataTask(with: url) { (data, response, error) in
-                if let error = error {
-                    observer.onError(Error(desc: error.localizedDescription))
-                }
-
-                guard let response = response, let data = data else {
-                    observer.onError(Error(desc: "No response received"))
-                    return
-                }
-
-                do { try validate(response) } catch { observer.onError(error) }
                 do {
-                    let mapper = try map(from: data)
-                    observer.onNext(mapper)
-                } catch { observer.onError(error) }
+                    let mapper = try map(from: data, response: response, error: error)
+                    single(.success(mapper))
+                } catch { single(.error(error)) }
             }
 
             task.resume()
             return Disposables.create { task.cancel() }
         }
-        .asSingle()
     }
 
 }
+
+// MARK: - Network Error
 
 extension Network {
 
@@ -44,6 +35,8 @@ extension Network {
     }
 
 }
+
+// MARK: - Response Validation
 
 private extension Network {
 
@@ -54,6 +47,25 @@ private extension Network {
         }
 
         guard case (200...299) = response.statusCode else { throw Error(desc: String(response.statusCode)) }
+    }
+
+}
+
+// MARK: - Map
+
+private extension Network {
+
+    static func map(from data: Data?, response: URLResponse?, error: Swift.Error?) throws -> Mapper {
+        if let error = error {
+            throw Error(desc: error.localizedDescription)
+        }
+
+        guard let response = response, let data = data else {
+            throw Error(desc: "No response received")
+        }
+
+        try validate(response)
+        return try map(from: data)
     }
 
     static func map(from data: Data) throws -> Mapper {

@@ -2,6 +2,7 @@ platform :ios, '10.3'
 
 def testingPods
   pod 'Nimble'
+  pod 'OHHTTPStubs/Swift'
 end
 
 target 'Hacker' do
