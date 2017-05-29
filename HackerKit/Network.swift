@@ -68,7 +68,7 @@ private extension Network {
         return try map(from: data)
     }
 
-    static func map(from data: Data) throws -> Mapper {
+    private static func map(from data: Data) throws -> Mapper {
         let json = try JSONSerialization.jsonObject(with: data, options: [])
         guard let dict = json as? NSDictionary else {
             throw Error(desc: "Unexpected root object in json: \(json)")
