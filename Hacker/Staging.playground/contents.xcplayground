@@ -4,5 +4,6 @@
         <page name='CoreDataDesign'/>
         <page name='InitialModels'/>
         <page name='ModelTests'/>
+        <page name='HNRequests'/>
     </pages>
 </playground>
