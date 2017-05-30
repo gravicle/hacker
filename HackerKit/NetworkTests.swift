@@ -90,4 +90,29 @@ class NetworkTests: XCTestCase {
         wait(for: [exp], timeout: 2.0)
     }
 
+    func testResponseDataParsing() {
+        let exp = expectation(description: "")
+
+        let json: Any = [
+            "testKey": "testValue",
+            "testObject": ["key": "value"],
+            "testArray": [1, 2, 3]
+        ]
+
+        stub(condition: { _ in true }) { (_) -> OHHTTPStubsResponse in
+            return .init(jsonObject: json, statusCode: 200, headers: nil)
+        }
+
+        _ = Network
+            .request(TestRequest(), using: session)
+            .subscribe(onSuccess: {
+                defer { exp.fulfill() }
+                expect(try? $0.from("testKey") as String) == "testValue"
+                expect(try? $0.from("testObject") as [String:String]) == ["key": "value"]
+                expect(try? $0.from("testArray") as [Int]) == [1, 2, 3]
+            })
+
+        wait(for: [exp], timeout: 1.0)
+    }
+
 }
