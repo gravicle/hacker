@@ -17,7 +17,8 @@ extension Request {
         }
 
         let queryString = params
-            .flatMap { (key, value) in
+            .flatMap { (arg) -> String? in
+                let (key, value) = arg
                 return value.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed).flatMap { key + "=" + $0 }
             }
             .joined(separator: "&")

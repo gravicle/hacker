@@ -1,4 +1,4 @@
-platform :ios, '10.3'
+platform :ios, '11.0'
 
 def testingPods
   pod 'Nimble'
@@ -88,7 +88,17 @@ def enableRswiftGeneration(project)
   end
 end
 
+def setSwiftVersion(version, target)
+  target.build_configurations.each do |config|
+    config.build_settings['SWIFT_VERSION'] = "#{version}"
+  end
+end
+
 post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    setSwiftVersion(3.2, target)
+  end
+
   project = Xcodeproj::Project.open(Dir.glob("*.xcodeproj")[0])
 
   puts "Enabling Whole Module Compilation"
